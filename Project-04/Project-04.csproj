@@ -69,7 +69,9 @@
   <ItemGroup>
     <Content Include="Files\Project4.xml" />
     <Content Include="Index.aspx" />
+    <Content Include="css\main.css" />
     <Content Include="Web.config" />
+    <Content Include="css\responsive.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Index.aspx.cs">
@@ -81,6 +83,7 @@
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
@@ -99,7 +102,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="fonts\" />
     <Folder Include="img\" />
   </ItemGroup>
