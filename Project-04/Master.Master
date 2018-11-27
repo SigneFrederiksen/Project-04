@@ -14,18 +14,32 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <!-- Header -->
-            <header>
-                <h1><a href="Index.apsx"><div id="logo">Logo</div></a></h1>
 
+            <!-- HEADER -->
+            <header>
+                <h1><a href="Index.apsx"><asp:Label ID="LabelLogo" runat="server" Text="MyLogo"></asp:Label></a></h1>
+
+
+                <asp:Menu ID="MenuCategories" runat="server">
+                    <Items>
+                        <asp:MenuItem Text="Categories" Value="Categories">
+                            <asp:MenuItem Text="Category 1" Value="Category 1"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                
+                <asp:TextBox ID="SearchBar" runat="server"></asp:TextBox>
+
+                <br />
+                <asp:Button ID="ButtonSearch" runat="server" Text="Search" />
 
             </header>
 
-            <!-- Empty content -->
+            <!-- EMPTY CONTENT -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
-            <!-- Footer --> 
+            <!-- FOOTER -->
         </div>
     </form>
 
