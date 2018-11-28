@@ -14,12 +14,9 @@
  
     <asp:Repeater ID="RepeaterPopularMovies" runat="server">
         <ItemTemplate>
-            <img src="img/<%# Eval("Poster") %>" alt="Movie poster" />
-                <p><%# Eval("Title") %></p>
-                <p>Year: <%# Eval("Year") %></p>
-                <p><%# Eval("Description") %></p>
-                <p>Actors: <%# Eval("Actors") %></p>
-                <p>Child rating: <%# Eval("ChildRating") %></p>
+            <p><%# Eval("Title") %></p>
+            <p><%# Eval("Genre") %></p>
+            <p>Year: <%# Eval("Year") %></p>
         </ItemTemplate>
     </asp:Repeater>
 
