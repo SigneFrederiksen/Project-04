@@ -71,7 +71,6 @@
     <Content Include="Index.aspx" />
     <Content Include="css\Master.css" />
     <Content Include="Web.config" />
-    <Content Include="css\responsive.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Index.aspx.cs">
