@@ -15,8 +15,8 @@
     <asp:Repeater ID="RepeaterPopularMovies" runat="server">
         <ItemTemplate>
             <p><%# Eval("Title") %></p>
-            <p><%# Eval("Genre") %></p>
             <p>Year: <%# Eval("Year") %></p>
+            <p><%# Eval("Genre") %></p>
         </ItemTemplate>
     </asp:Repeater>
 

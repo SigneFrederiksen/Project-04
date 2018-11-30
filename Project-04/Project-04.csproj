@@ -68,12 +68,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\Project4.xml" />
+    <Content Include="GetPosters.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master.css" />
     <Content Include="Web.config" />
     <Content Include="css\responsive.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetPosters.aspx.cs">
+      <DependentUpon>GetPosters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetPosters.aspx.designer.cs">
+      <DependentUpon>GetPosters.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
