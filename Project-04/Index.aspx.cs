@@ -13,7 +13,10 @@ namespace Project_04
     public partial class Index : System.Web.UI.Page
     {
         // Connection to Database with SQL Selection
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        // SIGNES DB
+        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        // AMANDAS DB
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         string sqlsel = "SELECT * FROM Movies";
