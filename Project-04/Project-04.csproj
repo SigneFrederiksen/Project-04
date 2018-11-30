@@ -67,14 +67,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Action.aspx" />
+    <Content Include="AllMovies.aspx" />
+    <Content Include="Animation.aspx" />
     <Content Include="APITest.aspx" />
     <Content Include="Files\Project4.xml" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
     <Content Include="js\master.js" />
+    <Content Include="ScienceFiction.aspx" />
+    <Content Include="Thriller.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action.aspx.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Action.aspx.designer.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllMovies.aspx.cs">
+      <DependentUpon>AllMovies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllMovies.aspx.designer.cs">
+      <DependentUpon>AllMovies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animation.aspx.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Animation.aspx.designer.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="APITest.aspx.cs">
       <DependentUpon>APITest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,6 +123,20 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScienceFiction.aspx.cs">
+      <DependentUpon>ScienceFiction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScienceFiction.aspx.designer.cs">
+      <DependentUpon>ScienceFiction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thriller.aspx.cs">
+      <DependentUpon>Thriller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thriller.aspx.designer.cs">
+      <DependentUpon>Thriller.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TokenClass.cs" />
   </ItemGroup>
   <ItemGroup>

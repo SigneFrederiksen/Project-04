@@ -30,17 +30,18 @@
 
                     <!-- Logo -->
                         <div class="col-xs-12 col-md-4">
-                            <h1><a href="Index.apsx"><asp:Label ID="LabelLogo" runat="server" Text="MyLogo"></asp:Label></a></h1>
+                            <h1><a href="Index.aspx"><asp:Label ID="LabelLogo" runat="server" Text="MyLogo"></asp:Label></a></h1>
                         </div>
                 
                     
                     <!-- Kategorier -->
                         <div class="col-xs-12 col-md-4">
                             <ul>
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Animation</a></li>
-                                <li><a href="#">Thriller</a></li>
-                                <li><a href="#">Science fiction</a></li>
+                                 <li><a href="AllMovies.aspx">All movies</a></li>
+                                <li><a href="Action.aspx">Action</a></li>
+                                <li><a href="Animation.aspx">Animation</a></li>
+                                <li><a href="Thriller.aspx">Thriller</a></li>
+                                <li><a href="Scien">Science fiction</a></li>
                             </ul>
                         </div>
              
@@ -64,17 +65,18 @@
                         
                     <!-- Logo -->
                         <div class="col-xs-12 col-md-4">
-                            <h1><a href="Index.apsx"><asp:Label ID="Label1" runat="server" Text="MyLogo"></asp:Label></a></h1>
+                            <h1><a href="Index.aspx"><asp:Label ID="Label1" runat="server" Text="MyLogo"></asp:Label></a></h1>
                         </div>
                 
                     
                     <!-- Kategorier -->
                         <div class="col-xs-12 col-md-4">
                             <ul>
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Animation</a></li>
-                                <li><a href="#">Thriller</a></li>
-                                <li><a href="#">Science fiction</a></li>
+                                <li><a href="AllMovies.aspx">All movies</a></li>
+                                <li><a href="Action.aspx">Action</a></li>
+                                <li><a href="Animation.aspx">Animation</a></li>
+                                <li><a href="Thriller.aspx">Thriller</a></li>
+                                <li><a href="Scien">Science fiction</a></li>
                             </ul>
                         </div>
               
