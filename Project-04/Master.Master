@@ -41,7 +41,7 @@
                                 <li><a href="Action.aspx">Action</a></li>
                                 <li><a href="Animation.aspx">Animation</a></li>
                                 <li><a href="Thriller.aspx">Thriller</a></li>
-                                <li><a href="Scien">Science fiction</a></li>
+                                <li><a href="ScienceFiction.aspx">Science fiction</a></li>
                             </ul>
                         </div>
              
@@ -76,7 +76,7 @@
                                 <li><a href="Action.aspx">Action</a></li>
                                 <li><a href="Animation.aspx">Animation</a></li>
                                 <li><a href="Thriller.aspx">Thriller</a></li>
-                                <li><a href="Scien">Science fiction</a></li>
+                                <li><a href="ScienceFiction.aspx">Science fiction</a></li>
                             </ul>
                         </div>
               
