@@ -10,16 +10,7 @@
 namespace Project_04 {
     
     
-    public partial class Master {
-        
-        /// <summary>
-        /// head control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+    public partial class APITest {
         
         /// <summary>
         /// form1 control.
@@ -31,22 +22,13 @@ namespace Project_04 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LabelLogo control.
+        /// TextBoxSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelLogo;
-        
-        /// <summary>
-        /// SearchBar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchBar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
         
         /// <summary>
         /// ButtonSearch control.
@@ -58,39 +40,30 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Button ButtonSearch;
         
         /// <summary>
-        /// Label1 control.
+        /// LabelMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
-        /// TextBox1 control.
+        /// RepeaterMovie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterMovie;
         
         /// <summary>
-        /// Button1 control.
+        /// LabelResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label LabelResult;
     }
 }

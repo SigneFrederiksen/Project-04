@@ -67,20 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="APITest.aspx" />
     <Content Include="Files\Project4.xml" />
-    <Content Include="GetPosters.aspx" />
     <Content Include="Index.aspx" />
-    <Content Include="css\Master.css" />
+    <Content Include="css\Master2.css" />
+    <Content Include="js\master.js" />
     <Content Include="Web.config" />
-    <Content Include="css\responsive.css" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetPosters.aspx.cs">
-      <DependentUpon>GetPosters.aspx</DependentUpon>
+    <Compile Include="APITest.aspx.cs">
+      <DependentUpon>APITest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetPosters.aspx.designer.cs">
-      <DependentUpon>GetPosters.aspx</DependentUpon>
+    <Compile Include="APITest.aspx.designer.cs">
+      <DependentUpon>APITest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

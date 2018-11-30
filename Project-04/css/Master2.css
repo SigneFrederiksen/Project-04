@@ -1,0 +1,110 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway'); 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+    background-color: #000;
+    color: #f1f1f1;
+}
+
+a, a:visited, a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    margin: 20px auto;
+    width: 100vw;
+}
+
+h1 a {
+    color: #ff3c66 !important;
+}
+
+
+header ul li {
+   display: inline-block !important;
+   margin: 5px 10px;
+   list-style-type: none;
+}
+
+header ul {
+   padding: 0;
+   text-align: center;
+}
+
+#search {
+   float: right;
+}
+
+#SearchBar {
+    margin: 0 10px;
+}
+
+footer {
+margin: 20px 0;
+font-size: 12px;
+}
+
+#f_right {
+    float: right;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    header #desktop {
+        display: none !important;
+    }
+
+    header ul {
+        padding: 0;
+        position: fixed;
+        bottom: 15px;
+    }
+
+    #mobile #search {
+        width: 100%;
+    }
+
+    #mobile input #Textbox1 {
+        margin: 0 5px;
+        width: 75%;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+    header #mobile {
+        display: none !important;
+    }
+
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+    header #mobile {
+        display: none !important;
+    }
+
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+
+
+    header #mobile {
+        display: none !important;
+    }
+
+}
