@@ -5,25 +5,25 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
 
-            <h2>Animation</h2>
+                <h2>Animation</h2>
 
-            <asp:Repeater ID="RepeaterAnimation" runat="server">
-                <ItemTemplate>
-                    <div class="moviedisplay">
-                        <h3><%# Eval("Title") %></h3>
-                        <p>Year: <%# Eval("Year") %></p>
-                        <img class="moviepic" src="<%# Eval("Poster") %>" alt="movie" />
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
+                <asp:Repeater ID="RepeaterAnimation" runat="server">
+                    <ItemTemplate>
+                        <div class="MovieDisplay">
+                            <h3><%# Eval("Title") %></h3>
+                            <p>Year: <%# Eval("Year") %></p>
+                            <p><%# Eval("Genre") %></p
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
 
-            <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
+                <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
+            </div>
         </div>
     </div>
-</div>
 
 </asp:Content>
