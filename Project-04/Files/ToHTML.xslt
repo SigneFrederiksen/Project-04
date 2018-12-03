@@ -9,8 +9,17 @@
       </div>
     </xsl:template>
     <xsl:template match="b:commercial">
+      <a>
+        <xsl:attribute name="href">
+          http://<xsl:value-of select="b:webpage"/>
+        </xsl:attribute>
         <h4><xsl:value-of select="@company"/></h4>
-        <p><xsl:value-of select="b:logo"/></p>
-        <p><xsl:value-of select="b:ourlogo"/></p>
+        <img class="com-img" alt="banner">
+            <xsl:attribute name="src">
+              ../img/<xsl:value-of select="b:logo"/>
+              <xsl:value-of select="b:ourlogo"/>
+            </xsl:attribute>      
+        </img>
+      </a>
     </xsl:template>
 </xsl:stylesheet>

@@ -11,8 +11,6 @@
         <div>
 
 
-            <asp:Xml ID="Xml1" runat="server" DocumentSource="~/Files/Commercials.xml" TransformSource="~/Files/Commercials.xslt"></asp:Xml>
-            <br />
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
 
 

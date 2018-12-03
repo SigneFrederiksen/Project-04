@@ -70,6 +70,7 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
+    <Content Include="img\logo1.jpg" />
     <Content Include="Tests\Commercials.aspx" />
     <Content Include="Tests\APITest.aspx" />
     <Content Include="Files\Commercials.xslt" />
@@ -80,7 +81,9 @@
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
     <Content Include="Thriller.aspx" />
-    <Content Include="Files\ToHTML.xslt" />
+    <Content Include="Files\ToHTML.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -169,7 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts\" />
-    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
