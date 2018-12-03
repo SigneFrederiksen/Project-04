@@ -40,13 +40,13 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelLogo;
         
         /// <summary>
-        /// SearchBar control.
+        /// TextBoxSearchBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchBar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearchBar;
         
         /// <summary>
         /// ButtonSearch control.
@@ -56,6 +56,15 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonSearch;
+        
+        /// <summary>
+        /// LabelMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
         /// Label1 control.
