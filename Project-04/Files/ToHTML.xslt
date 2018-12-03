@@ -4,11 +4,12 @@
   <xsl:output method="html"/>
 
     <xsl:template match="/">
-      <div id="commercial">
+      
         <xsl:apply-templates select="//b:commercial"/>
-      </div>
+    
     </xsl:template>
     <xsl:template match="b:commercial">
+      <div class="commercial">
       <a>
         <xsl:attribute name="href">
           http://<xsl:value-of select="b:webpage"/>
@@ -21,5 +22,6 @@
             </xsl:attribute>      
         </img>
       </a>
+      </div>
     </xsl:template>
 </xsl:stylesheet>

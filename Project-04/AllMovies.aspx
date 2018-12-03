@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <h2>Action</h2>
+            <h2>All movies</h2>
 
             <asp:Repeater ID="RepeaterAllMovies" runat="server">
                 <ItemTemplate>

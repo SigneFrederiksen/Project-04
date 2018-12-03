@@ -13,10 +13,10 @@
 
                 <asp:Repeater ID="RepeaterAnimation" runat="server">
                     <ItemTemplate>
-                        <div class="MovieDisplay">
+                        <div class="moviedisplay">
                             <h3><%# Eval("Title") %></h3>
                             <p>Year: <%# Eval("Year") %></p>
-                            <p><%# Eval("Genre") %></p
+                            <p><%# Eval("Genre") %></p>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
