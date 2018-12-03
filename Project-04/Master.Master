@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Project 4 - Movie Website</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!--Bootstrap CSS cdn-->
@@ -49,8 +49,10 @@
                     <!-- Search bar -->
                      <div class="col-xs-12 col-md-4">
                          <div id="search">
-                            <asp:TextBox ID="SearchBar" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxSearchBar" runat="server"></asp:TextBox>
                             <asp:Button ID="ButtonSearch" runat="server" Text="Search" OnClick="ButtonSearch_Click" />
+                             <br />
+                             <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
                          </div>
                      </div>
                     </div>

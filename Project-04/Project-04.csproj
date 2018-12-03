@@ -76,6 +76,7 @@
     <Content Include="css\Master2.css" />
     <Content Include="js\master.js" />
     <Content Include="ScienceFiction.aspx" />
+    <Content Include="SearchPage.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="ScienceFiction.aspx.designer.cs">
       <DependentUpon>ScienceFiction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Thriller.aspx.cs">
       <DependentUpon>Thriller.aspx</DependentUpon>
