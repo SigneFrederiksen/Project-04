@@ -12,6 +12,5 @@
         <h4><xsl:value-of select="@company"/></h4>
         <p><xsl:value-of select="b:logo"/></p>
         <p><xsl:value-of select="b:ourlogo"/></p>
-      <!--<a href="<xsl:value-of select="b:webpage"/>"> </a> -->
     </xsl:template>
 </xsl:stylesheet>
