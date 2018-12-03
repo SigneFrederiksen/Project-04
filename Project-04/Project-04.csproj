@@ -70,14 +70,17 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
-    <Content Include="APITest.aspx" />
-    <Content Include="Files\Project4.xml" />
+    <Content Include="Tests\Commercials.aspx" />
+    <Content Include="Tests\APITest.aspx" />
+    <Content Include="Files\Commercials.xslt" />
+    <Content Include="Files\Commercials.xml" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
     <Content Include="js\master.js" />
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
     <Content Include="Thriller.aspx" />
+    <Content Include="Files\ToHTML.xslt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,11 +105,18 @@
     <Compile Include="Animation.aspx.designer.cs">
       <DependentUpon>Animation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="APITest.aspx.cs">
+    <Compile Include="Tests\Commercials.aspx.cs">
+      <DependentUpon>Commercials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\Commercials.aspx.designer.cs">
+      <DependentUpon>Commercials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\APITest.aspx.cs">
       <DependentUpon>APITest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="APITest.aspx.designer.cs">
+    <Compile Include="Tests\APITest.aspx.designer.cs">
       <DependentUpon>APITest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
