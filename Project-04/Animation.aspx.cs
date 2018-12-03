@@ -14,9 +14,9 @@ namespace Project_04
     {
         // Connection to Database with SQL Selection
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+       // SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         string sqlsel = "SELECT * From Movies Left Join Genre On Movies.GenreID = Genre.ID WHERE Genre LIKE '%animation%'";
