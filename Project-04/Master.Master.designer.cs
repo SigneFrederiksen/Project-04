@@ -31,15 +31,6 @@ namespace Project_04 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LabelLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelLogo;
-        
-        /// <summary>
         /// TextBoxSearchBar control.
         /// </summary>
         /// <remarks>
@@ -67,31 +58,22 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
-        /// Label1 control.
+        /// TextBoxSearchBarMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearchBarMobile;
         
         /// <summary>
-        /// TextBox1 control.
+        /// ButtonSearchMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ButtonSearchMobile;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

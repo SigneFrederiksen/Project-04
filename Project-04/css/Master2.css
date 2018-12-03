@@ -6,27 +6,37 @@ body {
     font-family: Raleway, sans-serif;
     background-color: #000;
     color: #f1f1f1;
+    font-size: 14px;
 }
 
 a, a:visited, a:link {
     text-decoration: none;
     color: #ffffff;
+    font-weight: bold;
 }
 
 header {
     margin: 20px auto;
-    width: 100vw;
 }
 
 h1 a {
     color: #ff3c66 !important;
 }
 
+.heading-label {
+    margin: 50px 0;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+.p-small-bold {
+    font-weight: bold;
+}
 
 header ul li {
-   display: inline-block !important;
-   margin: 5px 10px;
-   list-style-type: none;
+    display: inline-block !important;
+    margin: 5px 10px;
+    list-style-type: none;
 }
 
 header ul {
@@ -34,7 +44,7 @@ header ul {
    text-align: center;
 }
 
-#search {
+.search {
    float: right;
 }
 
@@ -42,69 +52,108 @@ header ul {
     margin: 0 10px;
 }
 
+.search-field {
+    /*width: 80%;*/
+    border-radius: 10px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.search-button {
+    border-radius: 10px;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
 footer {
-margin: 20px 0;
-font-size: 12px;
+    margin: 20px 0;
+    font-size: 12px;
 }
 
 #f_right {
     float: right;
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+.movie-list {
+    margin-bottom: 50px;
+}
 
-    header #desktop {
-        display: none !important;
-    }
+.image-poster {
+    width: 100%;
+    margin-bottom: 25px;
+}
 
-    header ul {
-        padding: 0;
-        position: fixed;
-        bottom: 15px;
-    }
 
-    #mobile #search {
+/* Small devices (landscape phones, less than 425px) */
+@media (max-width: 425px) {
+    #mobile {
         width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: black;
     }
 
-    #mobile input #Textbox1 {
-        margin: 0 5px;
-        width: 75%;
+    .search {
+        float: none;
+        text-align: center;
+    }
+
+    .site-logo {
+        text-align: center;
+        margin-bottom: 25px;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-
-    header #mobile {
+@media (max-width: 768px) {
+    header #desktop {
         display: none !important;
     }
 
-
-}
-
-/* Large devices (desktops, less than 1200px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-
-    header #mobile {
-        display: none !important;
+    #mobile {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0;
+        background-color: black;
     }
 
+    .cat-nav-bot {
+        position: fixed;
+        bottom: 0px;
+        text-align: center;
+        z-index: 1;
+        background-color: black;
+        padding: 20px 0 5px;
+        font-size: 12px;
+    }
 }
 
-/* Extra large devices (large desktops) */
-@media (min-width: 1200px) {
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    /*#mobile {
+        display: none;
+    }*/
+}
 
-
-    header #mobile {
-        display: none !important;
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1024px) {
+    #mobile {
+        display: none;
     }
+}
 
+/* Extra large devices (large desktops, 1440px and up) */
+@media (max-width: 1440px) {
+    #mobile {
+        display: none;
+    }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (max-width: 2560px) {
+    #mobile {
+        display: none;
+    }
 }

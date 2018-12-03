@@ -20,7 +20,7 @@ namespace Project_04
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         //string sqlsel = "SELECT top 8 * From Movies Left Join Genre On Movies.GenreID = Genre.ID";
-        string sqlsel = "SELECT top 8 COUNT(*) PopularMovies, Movies.ID, Movies.Title, Movies.Year, Genre.Genre " +
+        string sqlsel = "SELECT top 6 COUNT(*) PopularMovies, Movies.ID, Movies.Title, Movies.Year, Genre.Genre " +
                         "FROM Views " +
                         "INNER JOIN Movies ON Views.MovieID = Movies.ID " +
                         "INNER JOIN Genre ON Movies.GenreID = Genre.ID " +
@@ -48,7 +48,7 @@ namespace Project_04
             }
             catch (Exception ex)
             {
-                LabelMessage.Text = ex.Message;
+                //LabelMessage.Text = ex.Message;
             }
             finally
             {

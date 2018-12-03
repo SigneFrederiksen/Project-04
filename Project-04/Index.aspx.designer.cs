@@ -13,15 +13,6 @@ namespace Project_04 {
     public partial class Index {
         
         /// <summary>
-        /// LabelHeadingPopular control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelHeadingPopular;
-        
-        /// <summary>
         /// RepeaterPopularMovies control.
         /// </summary>
         /// <remarks>
@@ -29,14 +20,5 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepeaterPopularMovies;
-        
-        /// <summary>
-        /// LabelMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMessage;
     }
 }

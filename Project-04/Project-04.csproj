@@ -72,6 +72,7 @@
     <Content Include="Animation.aspx" />
     <Content Include="APITest.aspx" />
     <Content Include="Files\Project4.xml" />
+    <Content Include="img\poster-placeholder.jpeg" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
     <Content Include="js\master.js" />
@@ -159,7 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts\" />
-    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

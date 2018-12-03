@@ -22,98 +22,92 @@
            <!-- HEADER -->
            <header>
 
-            <!-- DESKTOP/TABLET -->
-             <div id="desktop">
-                <div class="container-fluid">
-
-                    <div class="row">
-
-                    <!-- Logo -->
-                        <div class="col-xs-12 col-md-4">
-                            <h1><a href="Index.aspx"><asp:Label ID="LabelLogo" runat="server" Text="MyLogo"></asp:Label></a></h1>
-                        </div>
+                <!-- DESKTOP/TABLET -->
+                <div id="desktop">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- Logo -->
+                            <div class="col-xs-12 col-sm-4 col-md-2 col-lg-4">
+                                <h1 class="site-logo"><a href="Index.aspx">MyLogo</a></h1>
+                            </div>
                 
                     
-                    <!-- Kategorier -->
-                        <div class="col-xs-12 col-md-4">
-                            <ul>
-                                 <li><a href="AllMovies.aspx">All movies</a></li>
-                                <li><a href="Action.aspx">Action</a></li>
-                                <li><a href="Animation.aspx">Animation</a></li>
-                                <li><a href="Thriller.aspx">Thriller</a></li>
-                                <li><a href="Scien">Science fiction</a></li>
-                            </ul>
-                        </div>
+                            <!-- Kategorier -->
+                            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                                <ul>
+                                    <li><a href="AllMovies.aspx">All movies</a></li>
+                                    <li><a href="Action.aspx">Action</a></li>
+                                    <li><a href="Animation.aspx">Animation</a></li>
+                                    <li><a href="Thriller.aspx">Thriller</a></li>
+                                    <li><a href="Scien">Science fiction</a></li>
+                                </ul>
+                            </div>
              
                 
-                    <!-- Search bar -->
-                     <div class="col-xs-12 col-md-4">
-                         <div id="search">
-                            <asp:TextBox ID="TextBoxSearchBar" runat="server"></asp:TextBox>
-                            <asp:Button ID="ButtonSearch" runat="server" Text="Search" OnClick="ButtonSearch_Click" />
-                             <br />
-                             <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
-                         </div>
-                     </div>
+                            <!-- Search bar -->
+                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                 <div class="search">
+                                    <asp:TextBox ID="TextBoxSearchBar" runat="server" CssClass="search-field"></asp:TextBox>
+                                    <asp:Button ID="ButtonSearch" runat="server" Text="Search" OnClick="ButtonSearch_Click" CssClass="search-button" />
+                                     <!--<asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>-->
+                                 </div>
+                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-          <!-- MOBILE -->
 
-            <div id="mobile">
-                <div class="container-fluid">
-                    <div class="row">
-                        
-                    <!-- Logo -->
-                        <div class="col-xs-12 col-md-4">
-                            <h1><a href="Index.aspx"><asp:Label ID="Label1" runat="server" Text="MyLogo"></asp:Label></a></h1>
-                        </div>
+                <!-- MOBILE -->
+                <div id="mobile">
+                    <div class="container-fluid">
+                        <div class="row">   
+                            <!-- Logo -->
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <h1 class="site-logo"><a href="Index.aspx">MyLogo</a></h1>
+                            </div>
                 
                     
-                    <!-- Kategorier -->
-                        <div class="col-xs-12 col-md-4">
-                            <ul>
-                                <li><a href="AllMovies.aspx">All movies</a></li>
-                                <li><a href="Action.aspx">Action</a></li>
-                                <li><a href="Animation.aspx">Animation</a></li>
-                                <li><a href="Thriller.aspx">Thriller</a></li>
-                                <li><a href="Scien">Science fiction</a></li>
-                            </ul>
-                        </div>
+                            <!-- Kategorier -->
+                            <div class="col-xs-12 col-sm-12 col-md-12 cat-nav-bot">
+                                <ul>
+                                    <li><a href="AllMovies.aspx">All movies</a></li>
+                                    <li><a href="Action.aspx">Action</a></li>
+                                    <li><a href="Animation.aspx">Animation</a></li>
+                                    <li><a href="Thriller.aspx">Thriller</a></li>
+                                    <li><a href="Scien">Science fiction</a></li>
+                                </ul>
+                            </div>
               
                 
-                    <!-- Search bar -->
-                     <div class="col-xs-12 col-md-4">
-                         <div id="search">
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                            <asp:Button ID="Button1" runat="server" Text="Search" />
-                         </div>
-                     </div>
+                            <!-- Search bar -->
+                            <div class="col-xs-12 col-sm-12 col-md-8">
+                                <div class="search">
+                                    <asp:TextBox ID="TextBoxSearchBarMobile" runat="server" CssClass="search-field"></asp:TextBox>
+                                    <asp:Button ID="ButtonSearchMobile" runat="server" Text="Search" CssClass="search-button" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
           </header>
 
-            <!-- EMPTY CONTENT -->
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+          <!-- EMPTY CONTENT -->
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
 
-            <!-- FOOTER -->
-            <footer>
+          <!-- FOOTER -->
+          <footer>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                           <div id="f_left">
-                              <p>Content</p>
-                           </div>
+                            <div id="f_left">
+                                <p>Content</p>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                           <div id="f_right">
-                              <p>Content</p>
-                           </div>
+                            <div id="f_right">
+                                <p>Content</p>
+                            </div>
                         </div>
                     </div>
                 </div>

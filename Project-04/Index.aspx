@@ -5,28 +5,22 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-
-
-    <asp:Label ID="LabelHeadingPopular" runat="server" Text="Popular Movies"></asp:Label>
-    <br />
+    <div class="container-fluid">      
+        <div class="row">
     
-
+        <h2 class="col-md-12 heading-label">Our Top Movies</h2>
  
-    <asp:Repeater ID="RepeaterPopularMovies" runat="server">
-        <ItemTemplate>
-            <p><%# Eval("Title") %></p>
-            <p>Year: <%# Eval("Year") %></p>
-            <p><%# Eval("Genre") %></p>
-        </ItemTemplate>
-    </asp:Repeater>
+        <asp:Repeater ID="RepeaterPopularMovies" runat="server">
+            <ItemTemplate>
+                <div class="col-xs-2 col-sm-2 col-md-4 col-lg-2 movie-list">
+                    <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
+                    <h3><%# Eval("Title") %></h3>
+                    <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
 
-
-    
-    <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
-
-
-    
-    <br />
-    <br />
+        </div>
+    </div>
     
 </asp:Content>
