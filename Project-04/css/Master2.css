@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Raleway'); 
 
+
 body {
     margin: 0;
     padding: 0;
@@ -23,6 +24,10 @@ h1 a {
     color: #ff3c66 !important;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 .heading-label {
     margin: 50px 0;
     font-weight: bold;
@@ -44,12 +49,8 @@ header ul {
    text-align: center;
 }
 
-#desktop li a:hover, #desktop li a:active {
-    color: #ff3c66;
-}
-
 .search {
-   float: right;
+    float: right;
 }
 
 #SearchBar {
@@ -61,10 +62,6 @@ header ul {
     border-radius: 10px;
     border: none;
     padding: 5px 15px;
-    /* Amanda */
-    background-color: #232323;
-    color: #ffffff;
-    margin: 0 5px;
 }
 
 .search-button {
@@ -72,34 +69,20 @@ header ul {
     border: none;
     padding: 5px 15px;
     font-weight: bold;
-    /*Amanda*/
-    background-color: #363636;
-    color: #565656;
 }
 
-/* Amanda */
-
-.search-button:hover {
-    background-color: #232323;
+#mobile {
+    display: none;
 }
 
 footer {
-    /* margin: 20px 0; */
-    font-size: 13px;
-    /*Amanda*/ 
-    margin: 75px 0;
+    margin: 20px 0;
+    font-size: 12px;
 }
 
-/* Amanda */
-.footer {
-    text-align: center;
+#f_right {
+    float: right;
 }
-
-/* Amanda */
-
-    .footer p {
-        color: #565656;
-    }
 
 .movie-list {
     margin-bottom: 50px;
@@ -110,38 +93,46 @@ footer {
     margin-bottom: 25px;
 }
 
-/* Small devices (landscape phones, less than 425px) */
-@media (max-width: 425px) {
-    #mobile {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        background-color: black;
-    }
 
+/* Extra Small devices (landscape phones, 425px and down) */
+@media only screen and (max-width: 425px) {
+    
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media only screen and (max-width: 576px) {
     .search {
-        float: none;
-        text-align: center;
+        text-align: center !important;
     }
 
     .site-logo {
-        text-align: center;
-        margin-bottom: 25px;
+        text-align: center !important;
     }
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
-    header #desktop {
-        display: none !important;
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+    header {
+        margin-top: 120px;
+    }
+
+    #desktop {
+        display: none;
     }
 
     #mobile {
         display: inline-block;
         width: 100%;
-        padding: 20px 0;
+        position: fixed;
+        top: 0;
+        z-index: 1;
         background-color: black;
+        padding: 20px 0;
     }
 
     .cat-nav-bot {
@@ -153,68 +144,26 @@ footer {
         padding: 20px 0 5px;
         font-size: 12px;
     }
-}
 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-    /*#mobile {
-        display: none;
-    }*/
-}
+    .search {
+        float: none;
+        text-align: right;
+    }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1024px) {
-    #mobile {
-        display: none;
+    .site-logo {
+        text-align: left;
+        margin-bottom: 25px;
     }
 }
 
-/* Extra large devices (large desktops, 1440px and up) */
-@media (max-width: 1440px) {
-    #mobile {
-        display: none;
-    }
-}
-
-/* Extra large devices (large desktops, 1440px and up) */
-@media (max-width: 2560px) {
-    #mobile {
-        display: none;
-    }
-}
-
-
-/* --- Amandas input --- */
-
-/* Extra large devices (large desktops, 1440px and up) */
-@media (max-width: 425px) {
-    .commercial img {
-        width: 100%;
-        height: 100px;
-    }
+/* Extra large devices (large desktops, 1200px and down) */
+@media only screen and (max-width: 1024px) {
 
 }
 
-    /* Extra large devices (large desktops, 1440px and up) */
-    @media (max-width: 2560px) {
-
-        .commercial {
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            /*display:none;*/
-        }
-
-            .commercial h4 {
-                text-align: center;
-                position: absolute;
-                top: 115px;
-                left: 0;
-                right: 0
-            }
-
-            .commercial img {
-                width: 100%;
-                height: 300px;
-            }
+/* Extra, extra large devices (large desktops, 1440px and down) */
+@media only screen and (max-width: 1440px) {
+    h3 {
+        font-size: 1em;
     }
+}

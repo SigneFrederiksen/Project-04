@@ -12,7 +12,7 @@
  
         <asp:Repeater ID="RepeaterPopularMovies" runat="server">
             <ItemTemplate>
-                <div class="col-xs-2 col-sm-2 col-md-4 col-lg-2 movie-list">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">
                     <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
                     <h3><%# Eval("Title") %></h3>   
                     <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
