@@ -70,8 +70,6 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
-    <Content Include="APITest.aspx" />
-    <Content Include="Files\Project4.xml" />
     <Content Include="img\poster-placeholder.jpeg" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
@@ -102,13 +100,6 @@
     </Compile>
     <Compile Include="Animation.aspx.designer.cs">
       <DependentUpon>Animation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="APITest.aspx.cs">
-      <DependentUpon>APITest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="APITest.aspx.designer.cs">
-      <DependentUpon>APITest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -159,6 +150,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Files\" />
     <Folder Include="fonts\" />
   </ItemGroup>
   <PropertyGroup>
