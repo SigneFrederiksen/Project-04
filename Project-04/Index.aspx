@@ -14,7 +14,7 @@
             <ItemTemplate>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">
                     <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
-                    <h3><%# Eval("Title") %></h3>
+                    <h3><%# Eval("Title") %></h3>   
                     <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
                 </div>
             </ItemTemplate>
@@ -22,5 +22,12 @@
 
         </div>
     </div>
-    
+
+    <div class="container-fluid">
+        <div class="row">   
+            <div class="col-xs-12 col-md-12">
+                <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+            </div>
+        </div>
+    </div>
 </asp:Content>

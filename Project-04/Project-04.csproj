@@ -70,6 +70,10 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
+    <Content Include="img\logo1.jpg" />
+    <Content Include="img\logo2.jpg" />
+    <Content Include="img\logo3.jpg" />
+    <Content Include="img\logo4.jpg" />
     <Content Include="img\poster-placeholder.jpeg" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />

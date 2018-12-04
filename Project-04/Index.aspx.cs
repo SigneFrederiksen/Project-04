@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml;
+using System.Xml.Xsl;
+using System.IO;
+using System.Net;
 
 namespace Project_04
 {
@@ -14,9 +18,9 @@ namespace Project_04
     {
         // Connection to Database with SQL Selection
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+       // SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         //string sqlsel = "SELECT top 8 * From Movies Left Join Genre On Movies.GenreID = Genre.ID";
@@ -31,6 +35,19 @@ namespace Project_04
         {
             // Use method for showing the Movie data from Database
             ShowMovieData();
+
+            string sourcefile = Server.MapPath("Files/Commercials.xml");
+            string xslthtmlfile = Server.MapPath("Files/ToHTML.xslt");
+            string destinationhtmlfile = Server.MapPath("Files/ToHTML.html");
+
+            FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
+            XslCompiledTransform xcthtml = new XslCompiledTransform();
+            xcthtml.Load(xslthtmlfile);
+            xcthtml.Transform(sourcefile, null, fshtml);
+            fshtml.Close();
+
+            WebClient cl = new WebClient();
+            Literal1.Text = cl.DownloadString(destinationhtmlfile);
         }
 
         // Create method for our Movie data
