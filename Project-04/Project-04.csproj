@@ -70,6 +70,7 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
+    <Content Include="css\Master2 - Copy.css" />
     <Content Include="img\logo1.jpg" />
     <Content Include="img\logo2.jpg" />
     <Content Include="img\logo3.jpg" />
@@ -81,6 +82,7 @@
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
     <Content Include="Thriller.aspx" />
+    <Content Include="Tests\TrailerAPI.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +144,13 @@
       <DependentUpon>Thriller.aspx</DependentUpon>
     </Compile>
     <Compile Include="TokenClass.cs" />
+    <Compile Include="Tests\TrailerAPI.aspx.cs">
+      <DependentUpon>TrailerAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\TrailerAPI.aspx.designer.cs">
+      <DependentUpon>TrailerAPI.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

@@ -7,9 +7,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-12">
 
-            <h2>All movies</h2>
+            <h2 class="col-xs-12">All movies</h2>
 
             <asp:Repeater ID="RepeaterAllMovies" runat="server">
                 <ItemTemplate>
