@@ -74,6 +74,7 @@
     <Content Include="img\logo2.jpg" />
     <Content Include="img\logo3.jpg" />
     <Content Include="img\logo4.jpg" />
+    <Content Include="img\logo_projekt4.png" />
     <Content Include="img\poster-placeholder.jpeg" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
