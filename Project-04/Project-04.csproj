@@ -70,7 +70,6 @@
     <Content Include="Action.aspx" />
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
-    <Content Include="css\Master2 - Copy.css" />
     <Content Include="img\logo1.jpg" />
     <Content Include="img\logo2.jpg" />
     <Content Include="img\logo3.jpg" />
