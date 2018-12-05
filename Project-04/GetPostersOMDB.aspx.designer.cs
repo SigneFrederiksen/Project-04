@@ -10,7 +10,7 @@
 namespace Project_04 {
     
     
-    public partial class GetPosters {
+    public partial class GetPostersOMDB {
         
         /// <summary>
         /// form1 control.
@@ -29,15 +29,6 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelFieldtype;
-        
-        /// <summary>
-        /// RadioButtonJSON control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonJSON;
         
         /// <summary>
         /// RadioButtonXML control.
@@ -65,15 +56,6 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButtonName;
-        
-        /// <summary>
-        /// RadioButtonID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonID;
         
         /// <summary>
         /// TextBoxInput control.
@@ -130,30 +112,21 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Image ImagePoster;
         
         /// <summary>
-        /// LabelHeading control.
+        /// ButtonReadXMLToDB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelHeading;
+        protected global::System.Web.UI.WebControls.Button ButtonReadXMLToDB;
         
         /// <summary>
-        /// Label1 control.
+        /// RepeaterMovies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// ButtonReadXML control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonReadXML;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterMovies;
     }
 }
