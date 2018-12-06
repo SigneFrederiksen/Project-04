@@ -83,6 +83,7 @@
     <Content Include="js\master.js" />
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
+    <Content Include="SingleMovie.aspx" />
     <Content Include="Tests\ComTest.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Tests\TrailerAPI.aspx" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="SearchPage.aspx.designer.cs">
       <DependentUpon>SearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleMovie.aspx.cs">
+      <DependentUpon>SingleMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleMovie.aspx.designer.cs">
+      <DependentUpon>SingleMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tests\ComTest.aspx.cs">
       <DependentUpon>ComTest.aspx</DependentUpon>

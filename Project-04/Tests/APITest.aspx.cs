@@ -71,21 +71,17 @@ namespace Project_04
 
                 }
 
-                // Title, year, genre and poster
-              //  LabelResult.Text = nodelist[0].SelectSingleNode("@title").InnerText;
-               // LabelResult.Text += " Year: " + nodelist[0].SelectSingleNode("@imdbRating").InnerText;
-
-                LabelResult.Text = " Description: " + nodelist[0].SelectSingleNode("@plot").InnerText;
-                LabelResult.Text += " Actors: " + nodelist[0].SelectSingleNode("@actors").InnerText;
-                LabelResult.Text += " Director: " + nodelist[0].SelectSingleNode("@director").InnerText;
-                LabelResult.Text += " Rating: " + nodelist[0].SelectSingleNode("@imdbRating").InnerText;
+                
+                LabelDirector.Text += " Director: " + nodelist[0].SelectSingleNode("@director").InnerText;
+                LabelActors.Text += " Actors: " + nodelist[0].SelectSingleNode("@actors").InnerText;
+                LabelRating.Text += " Rating: " + nodelist[0].SelectSingleNode("@imdbRating").InnerText;
+                LabelDescription.Text = " Description: " + nodelist[0].SelectSingleNode("@plot").InnerText;
 
             }
 
             else
             {
                 LabelMessage.Text = "Movie not found";
-                //ImageDefault.ImageUrl = "";
                 LabelResult.Text = "";
             } 
 

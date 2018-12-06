@@ -61,5 +61,9 @@ namespace Project_04
             }
         }
 
+        protected void RepeaterSearchMovies_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }

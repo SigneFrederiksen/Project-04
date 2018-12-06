@@ -13,9 +13,11 @@
             <asp:Repeater ID="RepeaterAction" runat="server">
                 <ItemTemplate>
                     <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">
+                        <a href="SingleMovie.aspx?movie=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>">
                         <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
                         <h3><%# Eval("Title") %></h3>
                         <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
+                        </a>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>

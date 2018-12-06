@@ -16,7 +16,10 @@ namespace Project_04
 {
     public partial class GetPostersOMDB : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        // SIGNES DB
+        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        // AMANDAS DB
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlDataAdapter da = null;
         DataSet ds = null;
         DataTable dt = null;
@@ -124,24 +127,41 @@ namespace Project_04
         // Read XML to Database
         protected void ButtonReadXMLToDB_Click(object sender, EventArgs e)
         {
+
             try
             {
                 conn.Open();  //SqlDataAdapter opens connection by itself 
 
-                ds.ReadXml(Server.MapPath("~/Files/MoviePoster.xml"));
-                LabelMessages.Text = "Data from XML added to Database!";
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(Server.MapPath("~/Files/MoviePoster.xml"));
 
-                string sqlsel = "UPDATE Movies SET Poster = @poster WHERE Title = '" + TextBoxInput.Text + "'";
+                if (xmlDoc.SelectSingleNode("/root/@response").InnerText == "True") {
 
-                da.SelectCommand = new SqlCommand(sqlsel, conn);
+                    XmlNodeList dataNodes = xmlDoc.SelectNodes("/root/movie");
+                    foreach (XmlNode node in dataNodes)
+                    {
+                        string poster = node.SelectSingleNode("@poster").InnerText;
 
-                da.SelectCommand.Parameters.Add("@poster", SqlDbType.Text);
-                da.SelectCommand.ExecuteNonQuery();
+                        // insert into database, e.g. using SqlCommand or whatever
 
-                da.Update(ds, "movie");
+                        // ds.ReadXml(Server.MapPath("~/Files/MoviePoster.xml"));
+                        LabelMessages.Text = "Data from XML added to Database!";
 
-                ds.Clear();
-                UpdateRepeater();
+                        string sqlsel = "UPDATE Movies SET Poster = @poster WHERE Title = '" + TextBoxInput.Text + "'";
+
+                        da.SelectCommand = new SqlCommand(sqlsel, conn);
+                        da.SelectCommand.Parameters.Add("@poster", SqlDbType.Text).Value = poster;
+                        da.SelectCommand.ExecuteNonQuery();
+
+                        da.Update(ds, "movie");
+
+                        ds.Clear();
+                        UpdateRepeater();
+                    }
+
+                }
+
+               
 
                 /*da.Fill(ds, "movie");
                 dt = ds.Tables["movie"];
