@@ -71,6 +71,7 @@
     <Content Include="AllMovies.aspx" />
     <Content Include="Animation.aspx" />
     <Content Include="GetPostersOMDB.aspx" />
+    <Content Include="Files\Commercials.xml" />
     <Content Include="img\logo1.jpg" />
     <Content Include="img\logo2.jpg" />
     <Content Include="img\logo3.jpg" />
@@ -82,8 +83,10 @@
     <Content Include="js\master.js" />
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
+    <Content Include="Tests\ComTest.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Tests\TrailerAPI.aspx" />
+    <Content Include="Files\ToXML.xslt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +147,13 @@
     <Compile Include="SearchPage.aspx.designer.cs">
       <DependentUpon>SearchPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tests\ComTest.aspx.cs">
+      <DependentUpon>ComTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\ComTest.aspx.designer.cs">
+      <DependentUpon>ComTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Thriller.aspx.cs">
       <DependentUpon>Thriller.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,7 +181,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Files\" />
     <Folder Include="fonts\" />
   </ItemGroup>
   <PropertyGroup>
