@@ -22,13 +22,67 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Image ImagePoster;
         
         /// <summary>
-        /// RepeaterSingleMovie control.
+        /// LabelTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterSingleMovie;
+        protected global::System.Web.UI.WebControls.Label LabelTitle;
+        
+        /// <summary>
+        /// LabelYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelYear;
+        
+        /// <summary>
+        /// LabelGenre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelGenre;
+        
+        /// <summary>
+        /// LabelDirector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDirector;
+        
+        /// <summary>
+        /// LabelActors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelActors;
+        
+        /// <summary>
+        /// LabelRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRating;
+        
+        /// <summary>
+        /// LabelDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDescription;
         
         /// <summary>
         /// LabelMessage control.

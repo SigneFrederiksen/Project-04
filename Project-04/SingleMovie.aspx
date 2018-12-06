@@ -25,20 +25,19 @@
                         <!-- <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
                     </div>
                     <div class="col-6">
-                        <asp:Repeater ID="RepeaterSingleMovie" runat="server">
-                            <ItemTemplate>
+                          <div class="movie-details">
                                 <h3 class="heading-label"><asp:Label ID="LabelTitle" runat="server" Text="Label"><%# Eval("Title") %></asp:Label></h3>
-                                <p class="p-small-bold"><asp:Label ID="LabelInfo" runat="server" Text="Label"><%# Eval("Genre") %>, <%# Eval("Year") %></asp:Label></p>
+                                <p class="p-small-bold"><asp:Label ID="LabelYear" runat="server" Text="Label"> <%# Eval("Year") %></asp:Label></p>
+                                <p class="p-small-bold"><asp:Label ID="LabelGenre" runat="server" Text="Label"><%# Eval("Genre") %></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelDirector" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelActors" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelRating" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelDescription" runat="server"></asp:Label></p>
-                            </ItemTemplate>
-                        </asp:Repeater>
+                          </div>
                     </div>
 
 
-            <!--<asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>-->
+            <asp:Label ID="LabelMessage" runat="server"></asp:Label> 
 
         </div>
     </div>

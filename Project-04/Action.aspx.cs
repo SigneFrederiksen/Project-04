@@ -25,7 +25,7 @@ namespace Project_04
         {
             // Use method for showing the Movie data from Database
             ShowMovieData();
-           
+
         }
 
         // Create method for our Movie data
