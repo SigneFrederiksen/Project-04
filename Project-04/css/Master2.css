@@ -113,6 +113,29 @@ footer {
     margin-bottom: 25px;
 }
 
+.movie-pagination {
+    text-align: center;
+}
+
+.button-pagination {
+    background-color: #363636;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+.button-pagination:hover {
+    background-color: #232323;
+    cursor: pointer;
+}
+
+.label-pagination {
+    font-weight: bold;
+    padding: 0 20px;
+}
+
 
 /* Extra Small devices (landscape phones, 425px and down) */
 @media only screen and (max-width: 425px) {
@@ -184,11 +207,6 @@ footer {
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
 
-
-    h1 img {
-        width: 45%;
-    }
-
     h3 {
         font-size: 1.5em;
     }
@@ -204,6 +222,10 @@ footer {
 
 /* Extra large devices (large desktops, 1440px and up) */
 @media (max-width: 2560px) {
+
+    h1 img {
+        width: 45%;
+    }
 
     .commercial {
         width: 100%;

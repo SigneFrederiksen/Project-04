@@ -12,15 +12,22 @@
 
             <asp:Repeater ID="RepeaterAllMovies" runat="server">
                 <ItemTemplate>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">
-                    <
-                        <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" /> 
-                        <!-- <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">       
+                        <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
                         <h3><%# Eval("Title") %></h3>
                         <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+
+
+            <div class="col-md-12 movie-pagination"> 
+                <asp:button id="ButtonPrev" runat="server" text=" << " OnClick="ButtonPrev_Click" CssClass="button-pagination"></asp:button>     
+
+                <asp:label id="LabelCurrentPage" runat="server" CssClass="label-pagination"></asp:label>
+
+                <asp:button id="ButtonNext" runat="server" text=" >> " OnClick="ButtonNext_Click" CssClass="button-pagination"></asp:button>
+            </div>
 
             <!--<asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>-->
 
