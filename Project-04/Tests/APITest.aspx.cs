@@ -82,6 +82,7 @@ namespace Project_04
             else
             {
                 LabelMessage.Text = "Movie not found";
+
                 LabelResult.Text = "";
             } 
 
