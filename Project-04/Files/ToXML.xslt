@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
                 xmlns:c="http://my.company.com">
-<xsl:output method="xml" indent="yes"/>
+<xsl:output method="xml" omit-xml-declaration="yes" indent="yes"/>
+<xsl:strip-space elements="*"/>
+  
+ <xsl:param name="pIds" select="'1,2,3,4'"/>
+  
   <xsl:template match="c:commercials">
     <xsl:element name="Commercials">
       <xsl:apply-templates select="c:commercial"/>
@@ -9,6 +13,8 @@
   </xsl:template>
   <xsl:template match="c:commercial">
     <xsl:element name="Commercial">
+      <xsl:attribute name="id">
+      </xsl:attribute>
       <xsl:element name="Company">
         <xsl:value-of select="@company"/>
       </xsl:element>
@@ -23,6 +29,18 @@
         <xsl:value-of select="0"/>
       </xsl:element>
     </xsl:element>
+  </xsl:template>
+ <xsl:template match="Commercial">
+   <Commercial id="{pIds}">
+    <xsl:if test=
+     "contains(concat(',',$pIds,','),
+               concat(',',id,',')
+               )">
+    <xsl:attribute name="id">
+      <xsl:value-of select="id"/>
+    </xsl:attribute>
+   </xsl:if>
+    </Commercial>
   </xsl:template>
 </xsl:stylesheet>
 

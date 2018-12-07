@@ -24,7 +24,9 @@ namespace Project_04
             SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
             SqlCommand cmd = null;
 
+            // Retrieve strings from URL
             string movieid = Request.QueryString["Id"];
+          //  string movieposter = Request.QueryString["Poster"];
             string movietitle = Request.QueryString["Title"];
             string movieyear = Request.QueryString["Year"];
             string moviegenre = Request.QueryString["Genre"];
@@ -32,13 +34,17 @@ namespace Project_04
             // Selects all from movies where DB id is the same as the string "movieid"
             string sqlsel = "SELECT * From Movies Left Join Genre On Movies.GenreID = Genre.ID WHERE Id = 'movieid'";
 
+            // OMDB API Set-Up
             WebClient client = new WebClient();
             string result = "";
             //string movieselection = movietitle.Replace(' ', '+');
             //.Replace(' ', '+')
 
             result = client.DownloadString("http://www.omdbapi.com/?t=" + movietitle + "&r=xml&apikey=" + TokenClass.token);
-                
+
+            string posterdefault = Server.MapPath("~/img/poster-placeholder.jpeg");
+            string posterurl = "";
+
             try
             {
                 conn.Open();
@@ -46,6 +52,7 @@ namespace Project_04
                 cmd = new SqlCommand(sqlsel, conn);
 
                 // Adds database parameters to matching labels
+             
                 cmd.Parameters.Add("@Title", SqlDbType.Text).Value = LabelTitle.Text;
                 cmd.Parameters.Add("@Year", SqlDbType.Text).Value = LabelYear.Text;
                 cmd.Parameters.Add("@Genre", SqlDbType.Text).Value = LabelGenre.Text;
@@ -54,6 +61,16 @@ namespace Project_04
                 LabelTitle.Text = movietitle;
                 LabelYear.Text = movieyear;
                 LabelGenre.Text = moviegenre;
+
+
+                if (cmd.Parameters.AddWithValue("@Poster", posterurl) == null)
+                {
+                    ImagePoster2.ImageUrl = posterurl;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
+                }
 
                 File.WriteAllText(Server.MapPath("~/Files/LatestResult.xml"), result);
                 XmlDocument doc = new XmlDocument();
@@ -78,7 +95,7 @@ namespace Project_04
                 else
                 {
                     LabelMessage.Text = "Movie not found";
-                    //  ImagePoster.ImageUrl = Server.MapPath("~/img/poster-placeholder.jpeg");
+                    //  ImagePoster2.ImageUrl = Server.MapPath("~/img/poster-placeholder.jpeg");
                 }
 
             }

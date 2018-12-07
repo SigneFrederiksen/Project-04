@@ -21,7 +21,8 @@
     <div class="container-fluid">
         <div class="row">
                     <div class="col-6">
-                        <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" /> 
+                      <!--  <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" /> -->
+                        <asp:Image ID="ImagePoster2" runat="server" CssClass="image-poster" /> 
                         <!-- <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
                     </div>
                     <div class="col-6">

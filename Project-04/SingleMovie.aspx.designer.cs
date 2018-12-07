@@ -22,6 +22,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Image ImagePoster;
         
         /// <summary>
+        /// ImagePoster2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImagePoster2;
+        
+        /// <summary>
         /// LabelTitle control.
         /// </summary>
         /// <remarks>
