@@ -85,6 +85,7 @@
     <Content Include="SearchPage.aspx" />
     <Content Include="SingleMovie.aspx" />
     <Content Include="Tests\ComTest.aspx" />
+    <Content Include="Tests\SingleMovieTest.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Tests\TrailerAPI.aspx" />
     <Content Include="Files\ToXML.xslt" />
@@ -161,6 +162,13 @@
     </Compile>
     <Compile Include="Tests\ComTest.aspx.designer.cs">
       <DependentUpon>ComTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\SingleMovieTest.aspx.cs">
+      <DependentUpon>SingleMovieTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\SingleMovieTest.aspx.designer.cs">
+      <DependentUpon>SingleMovieTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Thriller.aspx.cs">
       <DependentUpon>Thriller.aspx</DependentUpon>
