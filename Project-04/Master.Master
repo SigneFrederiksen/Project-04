@@ -28,7 +28,7 @@
                         <div class="row">
                             <!-- Logo -->
                             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-4">
-                                <h1 class="site-logo"><a href="Index.aspx"><img src="img/logo_projekt4.png" alt=""></a></h1>
+                                <h1 class="site-logo"><a href="Index.aspx"><img src="img/logo_projekt4.png" alt="Moowish"></a></h1>
                             </div>
                 
                     
@@ -62,7 +62,7 @@
                         <div class="row">   
                             <!-- Logo -->
                             <div class="col-xs-12 col-sm-4 col-md-4">
-                                <h1 class="site-logo"><a href="Index.aspx">MyLogo</a></h1>
+                                <h1 class="site-logo"><a href="Index.aspx"><img src="img/logo_projekt4.png" alt="Moowish"></a></h1>
                             </div>
                 
                     

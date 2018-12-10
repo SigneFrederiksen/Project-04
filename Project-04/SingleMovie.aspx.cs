@@ -24,26 +24,16 @@ namespace Project_04
         SqlCommand cmd = null;
 
 
-        SqlDataAdapter da = null;
-        DataSet ds = null;
-        DataTable dt = null;
-        SqlCommandBuilder cb = null;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            da = new SqlDataAdapter();
-            ds = new DataSet();
-            dt = null;
-            cb = new SqlCommandBuilder(da);
 
-            SavePosterDB();
             ///////////////////////////////////////////////
 
 
 
             // Retrieve strings from URL
             string movieid = Request.QueryString["Id"];
-            //string movieposter = Request.QueryString["Poster"];
+            string movieposter = Request.QueryString["Poster"];
             string movietitle = Request.QueryString["Title"];
             string movieyear = Request.QueryString["Year"];
             string moviegenre = Request.QueryString["Genre"];
@@ -69,17 +59,26 @@ namespace Project_04
                 cmd = new SqlCommand(sqlsel, conn);
 
                 // Adds database parameters to matching labels
-             
+
+                cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
                 cmd.Parameters.Add("@Title", SqlDbType.Text).Value = LabelTitle.Text;
                 cmd.Parameters.Add("@Year", SqlDbType.Text).Value = LabelYear.Text;
                 cmd.Parameters.Add("@Genre", SqlDbType.Text).Value = LabelGenre.Text;
 
                 // Labels are assigned the values of the strings
+                ImagePoster2.ImageUrl = movieposter;
                 LabelTitle.Text = movietitle;
                 LabelYear.Text = movieyear;
                 LabelGenre.Text = moviegenre;
 
-
+                if (movieposter == "")
+                {
+                    ImagePoster2.ImageUrl = "~/img/poster-placeholder.jpeg";
+                }
+                else
+                {
+                    cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
+                }
                 /*if (cmd.Parameters.AddWithValue("@Poster", posterurl) == null)
                 {
                     ImagePoster2.ImageUrl = posterurl;
@@ -88,6 +87,7 @@ namespace Project_04
                 {
                     cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
                 }*/
+
 
                 File.WriteAllText(Server.MapPath("~/Files/LatestResult.xml"), result);
                 XmlDocument doc = new XmlDocument();
@@ -98,9 +98,9 @@ namespace Project_04
                     XmlNodeList nodelist = doc.SelectNodes("/root/movie");
                     foreach (XmlNode node in nodelist)
                     {
-                        string movieposter = node.SelectSingleNode("@poster").InnerText;
-                        ImagePoster2.ImageUrl = movieposter;                
-
+                        //string saveposter = node.SelectSingleNode("@poster").InnerText;
+                        //ImagePoster2.ImageUrl = movieposter;    
+        
                         /////////////////////////////////
 
                         LabelDirector.Text += " Director: " + nodelist[0].SelectSingleNode("@director").InnerText;
@@ -112,8 +112,6 @@ namespace Project_04
                 else
                 {
                     LabelMessage.Text = "Movie not found";
-                    //ImagePoster2.ImageUrl = "~/img/poster-placeholder.jpeg";
-                    //  ImagePoster2.ImageUrl = Server.MapPath("~/img/poster-placeholder.jpeg");
                 }
 
             }
@@ -129,55 +127,7 @@ namespace Project_04
 
 
 
-        
-        protected void SavePosterDB()
-        {
-            string movietitle = Request.QueryString["Title"];
-
-            try
-            {
-                conn.Open();  //SqlDataAdapter opens connection by itself 
-
-                string sqlsel = "Select * from Movies";
-                da.SelectCommand = new SqlCommand(sqlsel, conn);
-                da.Fill(ds, "movie");
-                dt = ds.Tables["movie"];
-
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(Server.MapPath("~/Files/MoviePoster.xml"));
-
-                if (xmlDoc.SelectSingleNode("/root/@response").InnerText == "True")
-                {
-
-                    XmlNodeList dataNodes = xmlDoc.SelectNodes("/root/movie");
-                    foreach (XmlNode node in dataNodes)
-                    {
-                        string poster = node.SelectSingleNode("@poster").InnerText;
-                        LabelMessage.Text = "Data from XML added to Database!";
-
-                        string sqlupd = "UPDATE Movies SET Poster = @poster WHERE Title = 'movietitle'";
-
-                        da.SelectCommand = new SqlCommand(sqlupd, conn);
-                        da.SelectCommand.Parameters.Add("@poster", SqlDbType.Text).Value = poster;
-                        da.SelectCommand.ExecuteNonQuery();
-
-                        da.Update(ds, "movie");
-                        ds.Clear();
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                LabelMessage.Text = ex.Message;
-            }
-            finally
-            {
-                conn.Close();  // SqlDataAdapter closes connection by itself; but can fail in case of errors
-            }
-        }
-        
+       
 
 
     }
