@@ -46,13 +46,14 @@
                             <!-- Search bar -->
                              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                  <div class="search">
-                                    <asp:TextBox ID="TextBoxSearchBar" runat="server" CssClass="search-field"></asp:TextBox>
+                                    <asp:TextBox ID="TextBoxSearchBar" runat="server" CssClass="search-field" Text="Movie title..." EnableViewState="True" Font-Overline="False" Font-Strikeout="False" ViewStateMode="Inherit"></asp:TextBox>
                                     <asp:Button ID="ButtonSearch" runat="server" Text="Search" OnClick="ButtonSearch_Click" CssClass="search-button" />
                                      <!--<asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>-->
                                  </div>
                              </div>
                         </div>
                     </div>
+                </div>
                 </div>
 
 
@@ -81,7 +82,7 @@
                             <!-- Search bar -->
                             <div class="col-xs-12 col-sm-8 col-md-8">
                                 <div class="search">
-                                    <asp:TextBox ID="TextBoxSearchBarMobile" runat="server" CssClass="search-field"></asp:TextBox>
+                                    <asp:TextBox ID="TextBoxSearchBarMobile" runat="server" CssClass="search-field" Text="Movie title..."></asp:TextBox>
                                     <asp:Button ID="ButtonSearchMobile" runat="server" Text="Search" CssClass="search-button" />
                                 </div>
                             </div>
