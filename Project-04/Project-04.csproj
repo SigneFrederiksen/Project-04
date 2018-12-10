@@ -88,7 +88,9 @@
     <Content Include="Tests\SingleMovieTest.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Tests\TrailerAPI.aspx" />
-    <Content Include="Files\ToXML.xslt" />
+    <Content Include="Files\ToXML.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
