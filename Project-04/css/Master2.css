@@ -26,6 +26,7 @@ h1 a {
 h3 {
     font-size: 2em;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .heading-label {
@@ -35,9 +36,9 @@ h3 {
     text-transform: uppercase;
 }
 
-.p-small-bold {
+/*.p-small-bold {
     font-weight: bold;
-}
+}*/
 
 header ul li {
     display: inline-block !important;
@@ -137,9 +138,18 @@ footer {
 }
 
 
+
+
+/* Extra Small devices (landscape phones, 375px and down) */
+@media only screen and (max-width: 375px) {
+
+}
+
 /* Extra Small devices (landscape phones, 425px and down) */
 @media only screen and (max-width: 425px) {
-    
+    .search-field {
+        width: 60%;
+    }
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -201,14 +211,25 @@ footer {
 
 /* Extra large devices (large desktops, 1200px and down) */
 @media only screen and (max-width: 1024px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
 
+    .p-small-bold {
+        font-size: 12px;
+    }
 }
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
 
     h3 {
-        font-size: 1.5em;
+        /*font-size: 1.5em;*/
     }
 }
 

@@ -13,10 +13,10 @@
             <asp:Repeater ID="RepeaterAction" runat="server">
                 <ItemTemplate>
                     <div class="col-6 col-sm-6 col-md-4 col-lg-2 movie-list">
-                        <a href="SingleMovie.aspx?title=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>&genre=<%# Eval("Genre") %>">
-                        <!--<a href="SingleMovie.aspx?poster&=<%# Eval("Poster") %>title=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>&genre=<%# Eval("Genre") %>">-->
-                     <asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />
-                       <!--  <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
+                        <!--<a href="SingleMovie.aspx?title=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>&genre=<%# Eval("Genre") %>">-->
+                        <a href="SingleMovie.aspx?poster=<%# Eval("Poster") %>&title=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>&genre=<%# Eval("Genre") %>">
+                        <!--<asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />-->
+                        <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" />
                         <h3><%# Eval("Title") %></h3>
                         <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
                         </a>
