@@ -26,6 +26,7 @@ namespace Project_04
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ButtonBack.Attributes.Add("onclick", "history.back();return false");
 
             // Activates the ViewCount method.
             ViewCount();
@@ -159,7 +160,8 @@ namespace Project_04
 
         }
 
-
-
+        protected void ButtonBack_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
