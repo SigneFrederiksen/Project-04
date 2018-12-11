@@ -23,9 +23,9 @@ namespace Project_04
 
             // Connection to Database with SQL Selection
             // SIGNES DB
-            //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
             // AMANDAS DB
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
             SqlDataAdapter da = null;
             DataSet ds = null;
             DataTable dt = null;
@@ -42,14 +42,19 @@ namespace Project_04
 
                 ds = new DataSet();
                 da.Fill(ds, "MovieSearchList");
-
                 dt = ds.Tables["MovieSearchList"];
 
                 RepeaterSearchMovies.DataSource = dt;
                 RepeaterSearchMovies.DataBind();
 
                 LabelHeading.Text = "You searched for: " + RetrievedSearchValue;
-                
+
+                // If there is no result matching the search input
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    LabelMessage.Text = "Movie not found. Try to search on another title.";
+                }
+
             }
             catch (Exception ex)
             {
@@ -65,5 +70,6 @@ namespace Project_04
         {
 
         }
+
     }
 }
