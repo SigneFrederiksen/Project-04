@@ -23,11 +23,11 @@ namespace Project_04
         //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
-        string sqlsel = "SELECT top 6 COUNT(*) PopularMovies, Movies.ID, Movies.Title, Movies.Year, Genre.Genre " +
+        string sqlsel = "SELECT top 6 COUNT(*) PopularMovies, Movies.ID, Movies.Title, Movies.Year, Genre.Genre, Movies.Poster " +
                         "FROM Views " +
                         "INNER JOIN Movies ON Views.MovieID = Movies.ID " +
                         "INNER JOIN Genre ON Movies.GenreID = Genre.ID " +
-                        "GROUP BY Movies.ID, Movies.Title, Movies.Year, Genre.Genre " +
+                        "GROUP BY Movies.ID, Movies.Title, Movies.Year, Genre.Genre, Movies.Poster " +
                         "ORDER BY PopularMovies desc";
 
         protected void Page_Load(object sender, EventArgs e)
