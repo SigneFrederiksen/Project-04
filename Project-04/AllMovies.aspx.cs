@@ -51,36 +51,47 @@ namespace Project_04
         // Create method for our Movie data
         public void ShowMovieData()
         {
-            da = new SqlDataAdapter();
-            da.SelectCommand = new SqlCommand(sqlsel, conn);
+            try
+            {
+                da = new SqlDataAdapter();
+                da.SelectCommand = new SqlCommand(sqlsel, conn);
 
-            ds = new DataSet();
-            da.Fill(ds, "MovieList");
-            dt = ds.Tables["MovieList"];
-         
-            // Populate the repeater control with the Items DataSet
-            PagedDataSource pds = new PagedDataSource();
-            pds.DataSource = ds.Tables[0].DefaultView;
+                ds = new DataSet();
+                da.Fill(ds, "MovieList");
+                dt = ds.Tables["MovieList"];
 
-            // Indicate that the data should be paged
-            pds.AllowPaging = true;
+                // Populate the repeater control with the Items DataSet
+                PagedDataSource pds = new PagedDataSource();
+                pds.DataSource = ds.Tables[0].DefaultView;
 
-            // Set the number of items you wish to display per page
-            pds.PageSize = 30;
+                // Indicate that the data should be paged
+                pds.AllowPaging = true;
 
-            // Set the PagedDataSource's current page
-            pds.CurrentPageIndex = CurrentPage;
+                // Set the number of items you wish to display per page
+                pds.PageSize = 30;
 
-            LabelCurrentPage.Text = (CurrentPage + 1).ToString() + " of "
-            + pds.PageCount.ToString();
+                // Set the PagedDataSource's current page
+                pds.CurrentPageIndex = CurrentPage;
 
-            // Disable Prev or Next buttons if necessary
-            ButtonPrev.Enabled = !pds.IsFirstPage;
-            ButtonNext.Enabled = !pds.IsLastPage;
+                LabelCurrentPage.Text = (CurrentPage + 1).ToString() + " of "
+                + pds.PageCount.ToString();
 
-            // Binding the correct data from the PagedDataSource to the Repeater
-            RepeaterAllMovies.DataSource = pds;
-            RepeaterAllMovies.DataBind();
+                // Disable Prev or Next buttons if necessary
+                ButtonPrev.Enabled = !pds.IsFirstPage;
+                ButtonNext.Enabled = !pds.IsLastPage;
+
+                // Binding the correct data from the PagedDataSource to the Repeater
+                RepeaterAllMovies.DataSource = pds;
+                RepeaterAllMovies.DataBind();
+            }
+            catch (Exception ex)
+            {
+                LabelMessage.Text = ex.Message;
+            }
+            finally
+            {
+                conn.Close();  // SqlDataAdapter closes connection by itself; but can fail in case of errors
+            }
         }
 
 

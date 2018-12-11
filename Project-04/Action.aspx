@@ -24,6 +24,15 @@
                 </ItemTemplate>
             </asp:Repeater>
 
+
+            <div class="col-md-12 movie-pagination"> 
+                <asp:button id="ButtonPrev" runat="server" text=" << " OnClick="ButtonPrev_Click" CssClass="button-pagination"></asp:button>     
+
+                <asp:label id="LabelCurrentPage" runat="server" CssClass="label-pagination"></asp:label>
+
+                <asp:button id="ButtonNext" runat="server" text=" >> " OnClick="ButtonNext_Click" CssClass="button-pagination"></asp:button>
+            </div>
+
             <!--<asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>-->
 
         </div>
