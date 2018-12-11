@@ -9,7 +9,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
-          
+            <asp:Button ID="ButtonBack" runat="server" Text="Go Back" OnClick="ButtonBack_Click" />
         </div>
          <div class="col-xs-12">
           
