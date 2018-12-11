@@ -19,15 +19,10 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
-        </div>
 
+            <p class="col-md-12"><asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label></p>
+
+        </div>
     </div>
 
-
-    <asp:Label ID="LabelMessage" runat="server" Text="No messages"></asp:Label>
-
-    
-    <br />
-    <br />
-    
 </asp:Content>
