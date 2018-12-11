@@ -17,9 +17,9 @@ namespace Project_04
     public partial class GetPostersOMDB : System.Web.UI.Page
     {
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlDataAdapter da = null;
         DataSet ds = null;
         DataTable dt = null;
@@ -31,6 +31,88 @@ namespace Project_04
             ds = new DataSet();
             dt = null;
             cb = new SqlCommandBuilder(da);
+
+            try
+            {
+                conn.Open();  //SqlDataAdapter opens connection by itself 
+
+                string sqlsel = "Select * from Movies";
+
+                da.SelectCommand = new SqlCommand(sqlsel, conn);
+                da.Fill(ds, "movie");
+                dt = ds.Tables["movie"];
+
+                foreach (DataRow row in dt.Rows)
+                {
+
+                    WebClient client = new WebClient();
+                    string result = "";
+                    string title = "";
+                    title = row["Title"].ToString();
+                    string myselection = title.Replace(" ", "%20");
+
+                    result = client.DownloadString("http://www.omdbapi.com/?t=" + myselection + "&r=xml&apikey=" + TokenClass.token);
+
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.LoadXml(result);
+
+                    //xmlDoc.Load(Server.MapPath("~/Files/MoviePoster.xml"));
+
+                    if (xmlDoc.SelectSingleNode("/root/@response").InnerText == "True")
+                    {
+
+                        XmlNodeList dataNodes = xmlDoc.SelectNodes("/root/movie");
+                        foreach (XmlNode node in dataNodes)
+                        {
+                            string poster = node.SelectSingleNode("@poster").InnerText;
+                            string xmltitle = node.SelectSingleNode("@title").InnerText;
+
+                            // insert into database, e.g. using SqlCommand or whatever
+
+                            // ds.ReadXml(Server.MapPath("~/Files/MoviePoster.xml"));
+                            LabelMessages.Text = "Data from XML added to Database!";
+
+
+                            string sqlsel2 = "UPDATE Movies SET Poster = @poster WHERE Title = '@title'";
+
+                            da.SelectCommand = new SqlCommand(sqlsel2, conn);
+                            da.SelectCommand.Parameters.Add("@poster", SqlDbType.Text).Value = poster;
+                            da.SelectCommand.ExecuteNonQuery();
+
+                            da.Update(ds, "movie");
+
+
+                            ds.Clear();
+
+                          //  UpdateRepeater();
+
+                        }
+                    }
+
+
+
+                }
+
+
+
+
+
+                /*da.Fill(ds, "movie");
+                dt = ds.Tables["movie"];
+
+                RepeaterMovies.DataSource = dt;
+                RepeaterMovies.DataBind();*/
+
+            }
+            catch (Exception ex)
+            {
+                LabelMessages.Text = ex.Message;
+            }
+            finally
+            {
+                conn.Close();  // SqlDataAdapter closes connection by itself; but can fail in case of errors
+            }
+
 
             UpdateRepeater();
         }
@@ -71,6 +153,7 @@ namespace Project_04
         {
             WebClient client = new WebClient();
             string result = "";
+
 
             if (RadioButtonName.Checked)
             {
@@ -128,57 +211,7 @@ namespace Project_04
         protected void ButtonReadXMLToDB_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                conn.Open();  //SqlDataAdapter opens connection by itself 
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(Server.MapPath("~/Files/MoviePoster.xml"));
-
-                if (xmlDoc.SelectSingleNode("/root/@response").InnerText == "True") {
-
-                    XmlNodeList dataNodes = xmlDoc.SelectNodes("/root/movie");
-                    foreach (XmlNode node in dataNodes)
-                    {
-                        string poster = node.SelectSingleNode("@poster").InnerText;
-
-                        // insert into database, e.g. using SqlCommand or whatever
-
-                        // ds.ReadXml(Server.MapPath("~/Files/MoviePoster.xml"));
-                        LabelMessages.Text = "Data from XML added to Database!";
-
-                        string sqlsel = "UPDATE Movies SET Poster = @poster WHERE Title = '" + TextBoxInput.Text + "'";
-
-                        da.SelectCommand = new SqlCommand(sqlsel, conn);
-                        da.SelectCommand.Parameters.Add("@poster", SqlDbType.Text).Value = poster;
-                        da.SelectCommand.ExecuteNonQuery();
-
-                        da.Update(ds, "movie");
-
-                        ds.Clear();
-                        UpdateRepeater();
-                    }
-
-                }
-
-               
-
-                /*da.Fill(ds, "movie");
-                dt = ds.Tables["movie"];
-
-                RepeaterMovies.DataSource = dt;
-                RepeaterMovies.DataBind();*/
-
-            }
-            catch (Exception ex)
-            {
-                LabelMessages.Text = ex.Message;
-            }
-            finally
-            {
-                conn.Close();  // SqlDataAdapter closes connection by itself; but can fail in case of errors
-            }
-
+            
             /*ds.ReadXml(Server.MapPath("~/Files/MoviePoster.xml"));
             LabelMessages.Text = "Data from XML added to Database!";
 

@@ -36,7 +36,7 @@ namespace Project_04.Tests
             DataSet ds = new DataSet();
             ds.ReadXml(destinationfile);
             DataTable dt = ds.Tables[0];
-            dt.Rows[0][3] = 1;
+           // dt.Rows[0][3] = 1;
             GridView1.DataSource = dt;
             GridView1.DataBind();
 

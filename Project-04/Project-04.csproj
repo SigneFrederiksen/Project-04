@@ -91,6 +91,7 @@
     <Content Include="Files\ToXML.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="UpdateAllPosters.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="Tests\TrailerAPI.aspx.designer.cs">
       <DependentUpon>TrailerAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAllPosters.aspx.cs">
+      <DependentUpon>UpdateAllPosters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateAllPosters.aspx.designer.cs">
+      <DependentUpon>UpdateAllPosters.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
