@@ -23,8 +23,10 @@ namespace Project_04
 
         public void allmovies()
         {
+            // SIGNES DB
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
             // AMANDAS DB
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
 
             SqlDataReader rdr = null;
             try
