@@ -54,7 +54,7 @@ namespace Project_04
                                     imageposter = mysplit[++i];
                                     if (imageposter == "N/A")
                                     {
-                                        imageposter = "img/poster-placeholder.jpeg";
+                                        imageposter = "~/img/poster-placeholder.jpeg";
                                     }
                                     cs.MovieDetails movie = new cs.MovieDetails();
                                     string movie_id = Convert.ToString(rdr.GetInt32(0));
