@@ -23,8 +23,10 @@ namespace Project_04.cs
             string sqlsel = "SELECT * from Movies";
             string sqlupd = "UPDATE Movies set Movies.Poster = @poster_url Where Movies.ID = @movie_id";
 
+            // SIGNES DB
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
             // AMANDAS DB
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
 
             conn.Open();
 

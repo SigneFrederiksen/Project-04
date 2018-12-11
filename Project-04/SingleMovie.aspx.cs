@@ -18,15 +18,17 @@ namespace Project_04
     {  
         
         // SIGNES DB
-        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            // Activates the ViewCount method.
+            ViewCount();
             ///////////////////////////////////////////////
 
 
@@ -126,8 +128,37 @@ namespace Project_04
         }
 
 
+        // Adds a timestamp of the selected movie to the database table Views. 
+        // Used to finding the most popular movies and for analytics.
+        public void ViewCount()
+        {
+            string movieid = Request.QueryString["Id"];
+            DateTime dateTimeVariable = DateTime.Now;
 
-       
+            string sqlupd = "INSERT INTO Views VALUES (@Datetime, @movieid)";
+
+            try
+            {
+                conn.Open();
+
+                cmd = new SqlCommand(sqlupd, conn);
+                cmd.Parameters.AddWithValue("@Datetime", dateTimeVariable);
+                cmd.Parameters.AddWithValue("@movieid", movieid);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                LabelMessage.Text = ex.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
 
 
     }
