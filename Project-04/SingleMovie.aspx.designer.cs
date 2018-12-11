@@ -49,6 +49,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelYear;
         
         /// <summary>
+        /// LabelRuntime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRuntime;
+        
+        /// <summary>
         /// LabelGenre control.
         /// </summary>
         /// <remarks>
@@ -58,13 +67,22 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelGenre;
         
         /// <summary>
-        /// LabelDirector control.
+        /// LabelRated control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDirector;
+        protected global::System.Web.UI.WebControls.Label LabelRated;
+        
+        /// <summary>
+        /// LabelDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDescription;
         
         /// <summary>
         /// LabelActors control.
@@ -76,22 +94,40 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelActors;
         
         /// <summary>
-        /// LabelRating control.
+        /// LabelDirector control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelRating;
+        protected global::System.Web.UI.WebControls.Label LabelDirector;
         
         /// <summary>
-        /// LabelDescription control.
+        /// LabelLanguage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDescription;
+        protected global::System.Web.UI.WebControls.Label LabelLanguage;
+        
+        /// <summary>
+        /// LabelCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCountry;
+        
+        /// <summary>
+        /// LabelAwards control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAwards;
         
         /// <summary>
         /// LabelMessage control.

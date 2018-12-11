@@ -93,13 +93,17 @@ namespace Project_04
                     {
                         //string saveposter = node.SelectSingleNode("@poster").InnerText;
                         //ImagePoster2.ImageUrl = movieposter;    
-        
+
                         /////////////////////////////////
 
-                        LabelDirector.Text += " Director: " + nodelist[0].SelectSingleNode("@director").InnerText;
-                        LabelActors.Text += " Actors: " + nodelist[0].SelectSingleNode("@actors").InnerText;
-                        LabelRating.Text += " Rating: " + nodelist[0].SelectSingleNode("@imdbRating").InnerText;
-                        LabelDescription.Text = " Description: " + nodelist[0].SelectSingleNode("@plot").InnerText;
+                        LabelRuntime.Text += nodelist[0].SelectSingleNode("@runtime").InnerText;
+                        LabelRated.Text += nodelist[0].SelectSingleNode("@rated").InnerText;
+                        LabelDescription.Text = nodelist[0].SelectSingleNode("@plot").InnerText;
+                        LabelActors.Text += nodelist[0].SelectSingleNode("@actors").InnerText;
+                        LabelDirector.Text += nodelist[0].SelectSingleNode("@director").InnerText;
+                        LabelLanguage.Text += nodelist[0].SelectSingleNode("@language").InnerText;
+                        LabelCountry.Text += nodelist[0].SelectSingleNode("@country").InnerText;
+                        LabelAwards.Text += nodelist[0].SelectSingleNode("@awards").InnerText;
                     }
                 }
                 else

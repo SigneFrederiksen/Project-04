@@ -137,7 +137,28 @@ footer {
     padding: 0 20px;
 }
 
+/* SINGLE MOVIE PAGE */
 
+.single-details {
+    width: 75%;
+}
+
+.p-undertitle {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.more-info p {
+    font-size: 0.8rem;
+}
+
+.span-info {
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
 
 
 /* Extra Small devices (landscape phones, 375px and down) */
@@ -228,9 +249,7 @@ footer {
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
 
-    h3 {
-        /*font-size: 1.5em;*/
-    }
+
 }
 
 /* Extra large devices (large desktops, 1440px and up) */

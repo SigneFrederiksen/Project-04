@@ -26,14 +26,21 @@
                         <!-- <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
                     </div>
                     <div class="col-6">
-                          <div class="movie-details">
+                          <div class="single-details">
                                 <h3 class="heading-label"><asp:Label ID="LabelTitle" runat="server" Text="Label"><%# Eval("Title") %></asp:Label></h3>
-                                <p class="p-small-bold"><asp:Label ID="LabelYear" runat="server" Text="Label"> <%# Eval("Year") %></asp:Label></p>
-                                <p class="p-small-bold"><asp:Label ID="LabelGenre" runat="server" Text="Label"><%# Eval("Genre") %></asp:Label></p>
-                                <p class=""><asp:Label ID="LabelDirector" runat="server"></asp:Label></p>
-                                <p class=""><asp:Label ID="LabelActors" runat="server"></asp:Label></p>
-                                <p class=""><asp:Label ID="LabelRating" runat="server"></asp:Label></p>
+                                <p class="p-undertitle"><asp:Label ID="LabelYear" runat="server" Text="Label"> <%# Eval("Year") %></asp:Label></p>
+                                <p class="p-undertitle"><asp:Label ID="LabelRuntime" runat="server"></asp:Label></p>
+                                <p class="p-undertitle"><asp:Label ID="LabelGenre" runat="server" Text="Label"><%# Eval("Genre") %></asp:Label></p>
+                                <p class="p-undertitle"><asp:Label ID="LabelRated" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelDescription" runat="server"></asp:Label></p>
+                                <div class="more-info">
+                                <p><span class="span-info">Actors</span><asp:Label ID="LabelActors" runat="server"></asp:Label></p>
+                                <p><span class="span-info">Director</span><asp:Label ID="LabelDirector" runat="server"></asp:Label></p>
+                                <p><span class="span-info">Language</span><asp:Label ID="LabelLanguage" runat="server"></asp:Label></p>
+                                <p><span class="span-info">Country</span><asp:Label ID="LabelCountry" runat="server"></asp:Label></p>
+                                <p><span class="span-info">Awards</span><asp:Label ID="LabelAwards" runat="server"></asp:Label></p>
+                                </div>
+                                <!-- Label Message -->
                                 <p class=""><asp:Label ID="LabelMessage" runat="server"></asp:Label> </p>
                           </div>
                     </div>
