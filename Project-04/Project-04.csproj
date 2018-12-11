@@ -80,6 +80,7 @@
     <Content Include="img\poster-placeholder.jpeg" />
     <Content Include="Index.aspx" />
     <Content Include="css\Master2.css" />
+    <Content Include="InsertAllMovies.aspx" />
     <Content Include="js\master.js" />
     <Content Include="ScienceFiction.aspx" />
     <Content Include="SearchPage.aspx" />
@@ -116,6 +117,7 @@
     <Compile Include="Animation.aspx.designer.cs">
       <DependentUpon>Animation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cs\MovieDetails.cs" />
     <Compile Include="GetPostersOMDB.aspx.cs">
       <DependentUpon>GetPostersOMDB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +131,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAllMovies.aspx.cs">
+      <DependentUpon>InsertAllMovies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertAllMovies.aspx.designer.cs">
+      <DependentUpon>InsertAllMovies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
