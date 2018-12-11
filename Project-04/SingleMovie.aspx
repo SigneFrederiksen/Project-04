@@ -34,11 +34,12 @@
                                 <p class=""><asp:Label ID="LabelActors" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelRating" runat="server"></asp:Label></p>
                                 <p class=""><asp:Label ID="LabelDescription" runat="server"></asp:Label></p>
+                                <p class=""><asp:Label ID="LabelMessage" runat="server"></asp:Label> </p>
                           </div>
                     </div>
 
 
-            <asp:Label ID="LabelMessage" runat="server"></asp:Label> 
+           
 
         </div>
     </div>

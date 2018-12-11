@@ -18,9 +18,9 @@ namespace Project_04
     {  
         
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
 
 
@@ -81,15 +81,6 @@ namespace Project_04
                 {
                     cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
                 }
-                /*if (cmd.Parameters.AddWithValue("@Poster", posterurl) == null)
-                {
-                    ImagePoster2.ImageUrl = posterurl;
-                }
-                else
-                {
-                    cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
-                }*/
-
 
                 File.WriteAllText(Server.MapPath("~/Files/LatestResult.xml"), result);
                 XmlDocument doc = new XmlDocument();
@@ -113,7 +104,7 @@ namespace Project_04
                 }
                 else
                 {
-                    LabelMessage.Text = "Movie not found";
+                    LabelMessage.Text = "(No movie info available)";
                 }
 
             }
