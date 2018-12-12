@@ -97,19 +97,39 @@ namespace Project_04
 
                         /////////////////////////////////
 
-                        LabelRuntime.Text += nodelist[0].SelectSingleNode("@runtime").InnerText;
-                        LabelRated.Text += nodelist[0].SelectSingleNode("@rated").InnerText;
+                        
+                        LabelRuntime.Text = nodelist[0].SelectSingleNode("@runtime").InnerText;
+                        LabelRated.Text = nodelist[0].SelectSingleNode("@rated").InnerText;
+                        LabelRated.CssClass = "label-rated";
                         LabelDescription.Text = nodelist[0].SelectSingleNode("@plot").InnerText;
-                        LabelActors.Text += nodelist[0].SelectSingleNode("@actors").InnerText;
-                        LabelDirector.Text += nodelist[0].SelectSingleNode("@director").InnerText;
-                        LabelLanguage.Text += nodelist[0].SelectSingleNode("@language").InnerText;
-                        LabelCountry.Text += nodelist[0].SelectSingleNode("@country").InnerText;
-                        LabelAwards.Text += nodelist[0].SelectSingleNode("@awards").InnerText;
+                        LabelActors.Text = nodelist[0].SelectSingleNode("@actors").InnerText;
+                        LabelDirector.Text = nodelist[0].SelectSingleNode("@director").InnerText;
+                        LabelLanguage.Text = nodelist[0].SelectSingleNode("@language").InnerText;
+                        LabelCountry.Text = nodelist[0].SelectSingleNode("@country").InnerText;
+                        LabelAwards.Text = nodelist[0].SelectSingleNode("@awards").InnerText;
+                        LabelRating.Text = nodelist[0].SelectSingleNode("@imdbRating").InnerText;
                     }
                 }
                 else
                 {
+                    
                     LabelMessage.Text = "(No movie info available)";
+                    LabelRated.Text = "";
+                    LabelDot1.Text = "";
+                    LabelDot2.Text = "";
+                    LabelDot3.Text = "";
+                    LabelSpanActors.Text = "";
+                    LabelActors.Text = "";
+                    LabelSpanDirector.Text = "";
+                    LabelDirector.Text = "";
+                    LabelSpanLanguage.Text = "";
+                    LabelLanguage.Text = "";
+                    LabelSpanCountry.Text = "";
+                    LabelCountry.Text = "";
+                    LabelSpanAwards.Text = "";
+                    LabelAwards.Text = "";
+                    LabelSpanRating.Text = "";
+                    LabelRating.Text = "";
                 }
 
             }

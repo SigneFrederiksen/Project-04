@@ -58,6 +58,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelYear;
         
         /// <summary>
+        /// LabelDot1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDot1;
+        
+        /// <summary>
         /// LabelRuntime control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelRuntime;
+        
+        /// <summary>
+        /// LabelDot2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDot2;
         
         /// <summary>
         /// LabelGenre control.
@@ -76,6 +94,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelGenre;
         
         /// <summary>
+        /// LabelDot3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDot3;
+        
+        /// <summary>
         /// LabelRated control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelRated;
+        
+        /// <summary>
+        /// LabelMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
         /// LabelDescription control.
@@ -94,6 +130,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelDescription;
         
         /// <summary>
+        /// LabelSpanActors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanActors;
+        
+        /// <summary>
         /// LabelActors control.
         /// </summary>
         /// <remarks>
@@ -101,6 +146,15 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelActors;
+        
+        /// <summary>
+        /// LabelSpanDirector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanDirector;
         
         /// <summary>
         /// LabelDirector control.
@@ -112,6 +166,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelDirector;
         
         /// <summary>
+        /// LabelSpanLanguage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanLanguage;
+        
+        /// <summary>
         /// LabelLanguage control.
         /// </summary>
         /// <remarks>
@@ -119,6 +182,15 @@ namespace Project_04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelLanguage;
+        
+        /// <summary>
+        /// LabelSpanCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanCountry;
         
         /// <summary>
         /// LabelCountry control.
@@ -130,6 +202,15 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelCountry;
         
         /// <summary>
+        /// LabelSpanAwards control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanAwards;
+        
+        /// <summary>
         /// LabelAwards control.
         /// </summary>
         /// <remarks>
@@ -139,12 +220,21 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelAwards;
         
         /// <summary>
-        /// LabelMessage control.
+        /// LabelSpanRating control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMessage;
+        protected global::System.Web.UI.WebControls.Label LabelSpanRating;
+        
+        /// <summary>
+        /// LabelRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRating;
     }
 }
