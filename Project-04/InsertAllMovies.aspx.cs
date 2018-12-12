@@ -52,7 +52,7 @@ namespace Project_04
                                 if (mysplit[i] == "Poster")
                                 {
                                     imageposter = mysplit[++i];
-                                    if (imageposter == "N/A")
+                                    if (imageposter == "N/A" )
                                     {
                                         imageposter = "~/img/poster-placeholder.jpeg";
                                     }
@@ -63,6 +63,16 @@ namespace Project_04
                                 }
                             }
                         }
+
+                        if (mysplit[1] == "False")
+                        {
+                            string imageposter;
+                            imageposter = "img/poster-placeholder.jpeg";
+                            cs.MovieDetails movie = new cs.MovieDetails();
+                            string movie_id = Convert.ToString(rdr.GetInt32(0));
+                            movie.SavePoster(imageposter, movie_id);
+                        }
+
                     }
                     testlabel.Text = rdr.GetInt32(0).ToString();
                 }
