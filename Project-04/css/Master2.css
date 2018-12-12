@@ -40,6 +40,11 @@ h3 {
     font-weight: bold;
 }*/
 
+#desktop li a.active, #mobile li a.active {
+    color: #ff3c66;
+    font-weight: bold;
+}
+
 header ul li {
     display: inline-block !important;
     margin: 5px 10px;
@@ -186,6 +191,17 @@ footer {
         z-index: 1;
         background-color: black;
         padding: 20px 0;
+    }
+
+    #mobile ul li {
+        display: inline-block !important;
+        margin: 5px 10px;
+        list-style-type: none;
+    }
+
+    #mobile ul {
+        padding: 0;
+        text-align: center;
     }
 
     .cat-nav-bot {
