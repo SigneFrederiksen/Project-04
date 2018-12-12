@@ -58,6 +58,33 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelYear;
         
         /// <summary>
+        /// LabelDot1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDot1;
+        
+        /// <summary>
+        /// LabelRuntime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRuntime;
+        
+        /// <summary>
+        /// LabelDot2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDot2;
+        
+        /// <summary>
         /// LabelGenre control.
         /// </summary>
         /// <remarks>
@@ -67,31 +94,31 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelGenre;
         
         /// <summary>
-        /// LabelDirector control.
+        /// LabelDot3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDirector;
+        protected global::System.Web.UI.WebControls.Label LabelDot3;
         
         /// <summary>
-        /// LabelActors control.
+        /// LabelRated control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelActors;
+        protected global::System.Web.UI.WebControls.Label LabelRated;
         
         /// <summary>
-        /// LabelRating control.
+        /// LabelMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelRating;
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
         /// LabelDescription control.
@@ -103,12 +130,111 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelDescription;
         
         /// <summary>
-        /// LabelMessage control.
+        /// LabelSpanActors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMessage;
+        protected global::System.Web.UI.WebControls.Label LabelSpanActors;
+        
+        /// <summary>
+        /// LabelActors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelActors;
+        
+        /// <summary>
+        /// LabelSpanDirector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanDirector;
+        
+        /// <summary>
+        /// LabelDirector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDirector;
+        
+        /// <summary>
+        /// LabelSpanLanguage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanLanguage;
+        
+        /// <summary>
+        /// LabelLanguage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelLanguage;
+        
+        /// <summary>
+        /// LabelSpanCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanCountry;
+        
+        /// <summary>
+        /// LabelCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCountry;
+        
+        /// <summary>
+        /// LabelSpanAwards control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanAwards;
+        
+        /// <summary>
+        /// LabelAwards control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAwards;
+        
+        /// <summary>
+        /// LabelSpanRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSpanRating;
+        
+        /// <summary>
+        /// LabelRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRating;
     }
 }

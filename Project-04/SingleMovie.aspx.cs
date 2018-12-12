@@ -18,9 +18,9 @@ namespace Project_04
     {  
         
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+        //SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
 
 
@@ -82,15 +82,6 @@ namespace Project_04
                 {
                     cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
                 }
-                /*if (cmd.Parameters.AddWithValue("@Poster", posterurl) == null)
-                {
-                    ImagePoster2.ImageUrl = posterurl;
-                }
-                else
-                {
-                    cmd.Parameters.Add("@Poster", SqlDbType.Text).Value = ImagePoster2.ImageUrl;
-                }*/
-
 
                 File.WriteAllText(Server.MapPath("~/Files/LatestResult.xml"), result);
                 XmlDocument doc = new XmlDocument();
@@ -103,18 +94,42 @@ namespace Project_04
                     {
                         //string saveposter = node.SelectSingleNode("@poster").InnerText;
                         //ImagePoster2.ImageUrl = movieposter;    
-        
+
                         /////////////////////////////////
 
-                        LabelDirector.Text += " Director: " + nodelist[0].SelectSingleNode("@director").InnerText;
-                        LabelActors.Text += " Actors: " + nodelist[0].SelectSingleNode("@actors").InnerText;
-                        LabelRating.Text += " Rating: " + nodelist[0].SelectSingleNode("@imdbRating").InnerText;
-                        LabelDescription.Text = " Description: " + nodelist[0].SelectSingleNode("@plot").InnerText;
+                        
+                        LabelRuntime.Text = nodelist[0].SelectSingleNode("@runtime").InnerText;
+                        LabelRated.Text = nodelist[0].SelectSingleNode("@rated").InnerText;
+                        LabelRated.CssClass = "label-rated";
+                        LabelDescription.Text = nodelist[0].SelectSingleNode("@plot").InnerText;
+                        LabelActors.Text = nodelist[0].SelectSingleNode("@actors").InnerText;
+                        LabelDirector.Text = nodelist[0].SelectSingleNode("@director").InnerText;
+                        LabelLanguage.Text = nodelist[0].SelectSingleNode("@language").InnerText;
+                        LabelCountry.Text = nodelist[0].SelectSingleNode("@country").InnerText;
+                        LabelAwards.Text = nodelist[0].SelectSingleNode("@awards").InnerText;
+                        LabelRating.Text = nodelist[0].SelectSingleNode("@imdbRating").InnerText;
                     }
                 }
                 else
                 {
-                    LabelMessage.Text = "Movie not found";
+                    
+                    LabelMessage.Text = "(No movie info available)";
+                    LabelRated.Text = "";
+                    LabelDot1.Text = "";
+                    LabelDot2.Text = "";
+                    LabelDot3.Text = "";
+                    LabelSpanActors.Text = "";
+                    LabelActors.Text = "";
+                    LabelSpanDirector.Text = "";
+                    LabelDirector.Text = "";
+                    LabelSpanLanguage.Text = "";
+                    LabelLanguage.Text = "";
+                    LabelSpanCountry.Text = "";
+                    LabelCountry.Text = "";
+                    LabelSpanAwards.Text = "";
+                    LabelAwards.Text = "";
+                    LabelSpanRating.Text = "";
+                    LabelRating.Text = "";
                 }
 
             }

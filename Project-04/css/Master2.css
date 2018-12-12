@@ -29,6 +29,10 @@ h3 {
     font-weight: bold;
 }
 
+.search-button, .button-back, .button-pagination {
+    cursor: pointer;
+}
+
 .heading-label {
     margin: 50px 0;
     font-weight: bold;
@@ -142,8 +146,86 @@ footer {
     padding: 0 20px;
 }
 
+/* SINGLE MOVIE PAGE */
 
+.button-back {
+    border-radius: 10px;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    background-color: #363636;
+    color: #909090;
+    margin-left: 135px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
 
+.button-back:hover {
+    background-color: #232323;
+}
+
+.image-info {
+    width: 60%;
+    margin: 0 auto;
+    display: inherit;
+}
+
+.single-details {
+    width: 75%;
+    margin: 15% auto;
+}
+
+.single-details h3 {
+    margin: 35px 0 !important;
+}
+
+.p-undertitle {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.no-movie {
+    margin-top: 1rem;
+}
+
+.dot {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+.more-info {
+    margin-top: 1.5rem;
+}
+
+.more-info p {
+    font-size: 0.8rem;
+   /* border: 0.5px solid #ff3c66;*/
+    margin: 0.1rem 0;
+}
+
+.span-info {
+    margin-right: 15px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.7rem;
+    color: #ff3c66;
+}
+
+.label-info {
+    font-size: 0.7rem;
+}
+
+.label-rated {
+    background-color: #ffffff;
+    padding: 1px 5px;
+    color: #000;
+    border-radius: 5%;
+    font-size: 0.9rem;
+}
 
 /* Extra Small devices (landscape phones, 375px and down) */
 @media only screen and (max-width: 375px) {
@@ -244,9 +326,7 @@ footer {
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
 
-    h3 {
-        /*font-size: 1.5em;*/
-    }
+
 }
 
 /* Extra large devices (large desktops, 1440px and up) */
