@@ -262,12 +262,20 @@ footer {
 /* Extra Small devices (landscape phones, 375px and down) */
 @media only screen and (max-width: 375px) {
 
+    .image-poster {
+        height: 200px;
+    }
+
 }
 
 /* Extra Small devices (landscape phones, 425px and down) */
 @media only screen and (max-width: 425px) {
     .search-field {
         width: 60%;
+    }
+
+    .image-poster {
+        height: 275px;
     }
 }
 
@@ -284,6 +292,10 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
+
+    .image-poster {
+        height: 350px;
+    }
 
 }
 
@@ -353,12 +365,18 @@ footer {
     .p-small-bold {
         font-size: 12px;
     }
+
+    .image-poster {
+        height: 200px;
+    }
 }
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
 
-
+    .image-poster {
+        height: 275px;
+    }
 }
 
 /* Extra large devices (large desktops, 1440px and up) */
