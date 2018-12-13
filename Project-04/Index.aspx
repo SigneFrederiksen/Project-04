@@ -8,6 +8,11 @@
     <div class="container-fluid">      
         <div class="row">
     
+        <div class="col-md-12">
+            <asp:Label ID="LabelTrailer" runat="server" Text=""></asp:Label>
+            <asp:Label ID="LabelTrailerName" runat="server" Text=""></asp:Label>
+        </div>
+
         <h2 class="col-md-12 heading-label">Our Top Movies</h2>
  
         <asp:Repeater ID="RepeaterPopularMovies" runat="server">
