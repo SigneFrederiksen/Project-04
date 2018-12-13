@@ -33,13 +33,13 @@ namespace Project_04
             ///////////////////////////////////////////////
 
 
-
             // Retrieve strings from URL
             string movieid = Request.QueryString["Id"];
             string movieposter = Request.QueryString["Poster"];
             string movietitle = Request.QueryString["Title"];
             string movieyear = Request.QueryString["Year"];
             string moviegenre = Request.QueryString["Genre"];
+
 
             // Selects all from movies where DB id is the same as the string "movieid"
             string sqlsel = "SELECT * From Movies Left Join Genre On Movies.GenreID = Genre.ID WHERE Id = 'movieid'";
