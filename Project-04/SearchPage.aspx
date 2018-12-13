@@ -8,7 +8,7 @@
     <div class="container-fluid">      
         <div class="row">
 
-            <h2 class="col-md-12 heading-label"><asp:Label ID="LabelHeading" runat="server"></asp:Label></h2>
+            <h2 class="col-md-12 search-h2"><asp:Label ID="LabelHeading" runat="server"></asp:Label></h2>
 
             <asp:Repeater ID="RepeaterSearchMovies" runat="server">
                 <ItemTemplate>
@@ -20,7 +20,7 @@
                 </ItemTemplate>
             </asp:Repeater>
 
-            <p class="col-md-12"><asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label></p>
+            <p class="col-md-12 not-found"><asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label></p>
 
         </div>
     </div>

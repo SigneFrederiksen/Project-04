@@ -22,33 +22,6 @@ namespace Project_04.Tests {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Xml1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Xml Xml1;
-        
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// LabelWebpage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelWebpage;
-        
-        /// <summary>
         /// LabelCompany control.
         /// </summary>
         /// <remarks>
@@ -58,12 +31,12 @@ namespace Project_04.Tests {
         protected global::System.Web.UI.WebControls.Label LabelCompany;
         
         /// <summary>
-        /// ImageLogo control.
+        /// ImageCommercial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageLogo;
+        protected global::System.Web.UI.WebControls.Image ImageCommercial;
     }
 }

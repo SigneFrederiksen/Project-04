@@ -30,14 +30,14 @@ namespace Project_04
             xct.Transform(sourcefile, null, fs);
             fs.Close();
 
-            FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
+          /*  FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
             XslCompiledTransform xcthtml = new XslCompiledTransform();
             xcthtml.Load(xslthtmlfile);
             xcthtml.Transform(sourcefile, null, fshtml);
             fshtml.Close();
 
             WebClient cl = new WebClient();
-            Literal1.Text = cl.DownloadString(destinationhtmlfile);
+            Literal1.Text = cl.DownloadString(destinationhtmlfile);*/
         }
     }
 }

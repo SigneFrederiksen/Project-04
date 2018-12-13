@@ -173,6 +173,7 @@ footer {
 
 .single-details h3 {
     margin: 35px 0 !important;
+    text-align: left !important;
 }
 
 .p-undertitle {
@@ -188,7 +189,7 @@ footer {
 }
 
 .dot {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #f1f1f1;
 }
 
@@ -221,6 +222,21 @@ footer {
     color: #000;
     border-radius: 5%;
     font-size: 0.9rem;
+}
+
+/* SEARCH PAGE */
+
+.not-found {
+    text-align: center;
+}
+
+.search-h2 {
+    margin: 50px 0;
+    font-weight: bold;
+    color: lightgrey;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 /* Extra Small devices (landscape phones, 375px and down) */
