@@ -19,7 +19,31 @@ namespace Project_04
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Url.AbsolutePath.EndsWith("AllMovies.aspx"))
+            {
+                lnkAll.Attributes["class"] = "active";
+                mlnkAll.Attributes["class"] = "active";
+            }
+            if (Request.Url.AbsolutePath.EndsWith("Action.aspx"))
+            {
+                lnkAct.Attributes["class"] = "active";
+                mlnkAct.Attributes["class"] = "active";
+            }
+            if (Request.Url.AbsolutePath.EndsWith("Animation.aspx"))
+            {
+                lnkAni.Attributes["class"] = "active";
+                mlnkAni.Attributes["class"] = "active";
+            }
+            if (Request.Url.AbsolutePath.EndsWith("Thriller.aspx"))
+            {
+                lnkThr.Attributes["class"] = "active";
+                mlnkThr.Attributes["class"] = "active";
+            }
+            if (Request.Url.AbsolutePath.EndsWith("ScienceFiction.aspx"))
+            {
+                lnkSci.Attributes["class"] = "active";
+                mlnkSci.Attributes["class"] = "active";
+            }
         }
 
         // Button Search
