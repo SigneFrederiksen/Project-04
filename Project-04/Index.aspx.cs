@@ -35,18 +35,31 @@ namespace Project_04
             // Use method for showing the Movie data from Database
             ShowMovieData();
 
-            string sourcefile = Server.MapPath("Files/Commercials.xml");
-            string xslthtmlfile = Server.MapPath("Files/ToHTML.xslt");
-            string destinationhtmlfile = Server.MapPath("Files/ToHTML.html");
+            // Save the transformed xml file in an variable
+            string destinationfile = Server.MapPath("~/Files/CommercialsTransformed.xml");
 
-            FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
-            XslCompiledTransform xcthtml = new XslCompiledTransform();
-            xcthtml.Load(xslthtmlfile);
-            xcthtml.Transform(sourcefile, null, fshtml);
-            fshtml.Close();
+            // Create a new dataset/table and reading the xml file
+            DataSet ds = new DataSet();
+            ds.ReadXml(destinationfile);
+            DataTable dt = ds.Tables[0];
 
-            WebClient cl = new WebClient();
-            Literal1.Text = cl.DownloadString(destinationhtmlfile);
+            // using the "Random" method to randomize the commercials
+            int viewcounter = 0;
+            int randomCommercial = (new Random()).Next(0, dt.Rows.Count);
+
+            // viewcounter is now assigned the value of the current value of the viewcounter + 
+            viewcounter = viewcounter + Convert.ToInt32(ds.Tables[0].Rows[randomCommercial][3]) + 1;
+
+            dt.Rows[randomCommercial][3] = viewcounter;
+
+            // insert the values from the xml to the different elements
+            LabelCompany.Text = Convert.ToString(dt.Rows[randomCommercial][0]);
+            Webpage.HRef = "http://" + Convert.ToString(dt.Rows[randomCommercial][2]);
+            ImageCommercial.ImageUrl = "~/img/" + Convert.ToString(dt.Rows[randomCommercial][1]);
+
+            // updating the transformed xml each time a new view has occurred
+            ds.WriteXml(Server.MapPath("~/Files/CommercialsTransformed.xml"));
+
         }
 
         // Create method for our Movie data
