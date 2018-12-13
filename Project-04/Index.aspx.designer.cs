@@ -13,6 +13,24 @@ namespace Project_04 {
     public partial class Index {
         
         /// <summary>
+        /// LabelTrailer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTrailer;
+        
+        /// <summary>
+        /// LabelTrailerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTrailerName;
+        
+        /// <summary>
         /// RepeaterPopularMovies control.
         /// </summary>
         /// <remarks>

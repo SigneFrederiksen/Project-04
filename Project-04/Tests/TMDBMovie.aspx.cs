@@ -20,7 +20,7 @@ namespace Project_04.Tests
         {
             WebClient client = new WebClient();
             string result = "";
-            string id = "920";
+            string id = "49013";
             //string name = "Frozen";
 
             result = client.DownloadString("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=" + TokenClass.TMDBtoken + "&append_to_response=videos");
@@ -34,7 +34,7 @@ namespace Project_04.Tests
 
 
 
-            if (mysplit[4] != "False")
+            if (mysplit[1] != "False")
             {
                 LabelMessage.Text = "Movie found!";
 
@@ -45,6 +45,15 @@ namespace Project_04.Tests
                         string movietrailer = mysplit[++i];
                         LabelVideo.Text = movietrailer;
                         LabelVideo.Text = "<iframe width='1200' height='315' src='https://www.youtube.com/embed/" + movietrailer + "'></iframe>";
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < mysplit.Length; i++)
+                {
+                    if (mysplit[i] == "name")
+                    {
+                        LabelName.Text = mysplit[++i];
                         break;
                     }
                 }

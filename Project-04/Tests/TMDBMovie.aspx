@@ -15,6 +15,9 @@
             <asp:Label ID="LabelVideo" runat="server"></asp:Label>
             <br />
 
+            <asp:Label ID="LabelName" runat="server"></asp:Label>
+            <br />
+
             <asp:Label ID="LabelResult" runat="server" Text=""></asp:Label>
         </div>
     </form>
