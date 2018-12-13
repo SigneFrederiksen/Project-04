@@ -16,8 +16,10 @@
                         <a href="SingleMovie.aspx?poster=<%# Eval("Poster") %>&title=<%# Eval("Title") %>&id=<%# Eval("Id") %>&year=<%# Eval("Year") %>&genre=<%# Eval("Genre") %>">
                             <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" />
                             <!--<asp:Image ID="ImagePoster" runat="server" ImageUrl="~/img/poster-placeholder.jpeg" CssClass="image-poster" />-->
+                             <div class="image-text">
                             <h3><%# Eval("Title") %></h3>
                             <p class="p-small-bold"><%# Eval("Genre") %>, <%# Eval("Year") %></p>
+                             </div>
                         </a>
                     </div>
                 </ItemTemplate>

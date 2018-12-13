@@ -41,9 +41,10 @@ h3 {
     text-align: center;
 }
 
-/*.p-small-bold {
-    font-weight: bold;
-}*/
+.p-small-bold {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
 
 #desktop li a.active, #mobile li a.active {
     color: #ff3c66;
@@ -128,15 +129,8 @@ footer {
     transform: scale(1.05,1.05);
 }
 
-.image-text {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 86%;
-    padding: 5px;
-}
 
-.image-poster:hover > .image-text {
+.image-poster:hover ~ .image-text {
     transform: scale(1.05,1.05);
     }
 
@@ -166,10 +160,6 @@ footer {
 /* COMMERCIAL */
 
 
-
-#ImageCommerical {
-
-}
 
 /* SINGLE MOVIE PAGE */
 
@@ -406,15 +396,9 @@ footer {
             height: 200px;
         }
 
-    .footer .copy-streg {
-        width: 130px;
-        height: 0.5px;
-        background-color: #565656;
-        margin: 0 auto;
-        margin-bottom: 15px;
+    .footer .copy {
+        font-weight: bold;
+        margin: 35px 0;
+        color: #747474;
     }
-
-        .footer .copy {
-            font-weight: bold;
-        }
 }
