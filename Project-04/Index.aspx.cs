@@ -18,9 +18,9 @@ namespace Project_04
     {
         // Connection to Database with SQL Selection
         // SIGNES DB
-        SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
+       // SqlConnection conn = new SqlConnection(@"data source = DESKTOP-VKU3EK5; integrated security = true; database = MovieDB");
         // AMANDAS DB
-        //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
+        SqlConnection conn = new SqlConnection(@"data source = LAPTOP-7ILGU10M; integrated security = true; database = MovieDB");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         string sqlsel = "SELECT top 6 COUNT(*) PopularMovies, Movies.ID, Movies.Title, Movies.Year, Genre.Genre, Movies.Poster " +
@@ -35,20 +35,31 @@ namespace Project_04
             // Use method for showing the Movie data from Database
             ShowMovieData();
 
-            ///////////////////////////////
+            // Save the transformed xml file in an variable
+            string destinationfile = Server.MapPath("~/Files/CommercialsTransformed.xml");
 
-            string sourcefile = Server.MapPath("Files/Commercials.xml");
-            string xslthtmlfile = Server.MapPath("Files/ToHTML.xslt");
-            string destinationhtmlfile = Server.MapPath("Files/ToHTML.html");
+            // Create a new dataset/table and reading the xml file
+            DataSet ds = new DataSet();
+            ds.ReadXml(destinationfile);
+            DataTable dt = ds.Tables[0];
 
-            FileStream fshtml = new FileStream(destinationhtmlfile, FileMode.Create);
-            XslCompiledTransform xcthtml = new XslCompiledTransform();
-            xcthtml.Load(xslthtmlfile);
-            xcthtml.Transform(sourcefile, null, fshtml);
-            fshtml.Close();
+            // using the "Random" method to randomize the commercials
+            int viewcounter = 0;
+            int randomCommercial = (new Random()).Next(0, dt.Rows.Count);
 
-            WebClient cl = new WebClient();
-            Literal1.Text = cl.DownloadString(destinationhtmlfile);
+            // viewcounter is now assigned the value of the current value of the viewcounter + 
+            viewcounter = viewcounter + Convert.ToInt32(ds.Tables[0].Rows[randomCommercial][3]) + 1;
+
+            dt.Rows[randomCommercial][3] = viewcounter;
+
+            // insert the values from the xml to the different elements
+            LabelCompany.Text = Convert.ToString(dt.Rows[randomCommercial][0]);
+            Webpage.HRef = "http://" + Convert.ToString(dt.Rows[randomCommercial][2]);
+            ImageCommercial.ImageUrl = "~/img/" + Convert.ToString(dt.Rows[randomCommercial][1]);
+
+            // updating the transformed xml each time a new view has occurred
+            ds.WriteXml(Server.MapPath("~/Files/CommercialsTransformed.xml"));
+
         }
 
         // Create method for our Movie data

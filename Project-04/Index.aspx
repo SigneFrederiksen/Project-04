@@ -31,7 +31,10 @@
     <div class="container-fluid">
         <div class="row">   
             <div class="col-xs-12 col-md-12">
-                <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                <a id="Webpage" runat="server" href="#">
+                 <asp:Label ID="LabelCompany" runat="server" Text="Label"></asp:Label>
+                <asp:Image ID="ImageCommercial" runat="server" />
+                </a>
             </div>
         </div>
     </div>
