@@ -86,7 +86,9 @@
     <Content Include="SearchPage.aspx" />
     <Content Include="SingleMovie.aspx" />
     <Content Include="Tests\ComTest.aspx" />
+    <Content Include="Tests\InsertAllTrailers.aspx" />
     <Content Include="Tests\SingleMovieTest.aspx" />
+    <Content Include="Tests\TMDBMovie.aspx" />
     <Content Include="Thriller.aspx" />
     <Content Include="Tests\TrailerAPI.aspx" />
     <Content Include="Files\ToXML.xslt">
@@ -118,6 +120,7 @@
       <DependentUpon>Animation.aspx</DependentUpon>
     </Compile>
     <Compile Include="cs\MovieDetails.cs" />
+    <Compile Include="cs\TrailerDetails.cs" />
     <Compile Include="GetPostersOMDB.aspx.cs">
       <DependentUpon>GetPostersOMDB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,12 +178,26 @@
     <Compile Include="Tests\ComTest.aspx.designer.cs">
       <DependentUpon>ComTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tests\InsertAllTrailers.aspx.cs">
+      <DependentUpon>InsertAllTrailers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\InsertAllTrailers.aspx.designer.cs">
+      <DependentUpon>InsertAllTrailers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tests\SingleMovieTest.aspx.cs">
       <DependentUpon>SingleMovieTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tests\SingleMovieTest.aspx.designer.cs">
       <DependentUpon>SingleMovieTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TMDBMovie.aspx.cs">
+      <DependentUpon>TMDBMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\TMDBMovie.aspx.designer.cs">
+      <DependentUpon>TMDBMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Thriller.aspx.cs">
       <DependentUpon>Thriller.aspx</DependentUpon>

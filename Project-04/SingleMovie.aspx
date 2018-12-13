@@ -48,6 +48,10 @@
                                 </div>
                           </div>
                     </div>
+                    <!--<div class="col-12">
+                        <asp:Label ID="LabelTrailer" runat="server"></asp:Label>
+                        <asp:Label ID="LabelResult" runat="server"></asp:Label>
+                    </div>-->
         </div>
     </div>
 </asp:Content>
