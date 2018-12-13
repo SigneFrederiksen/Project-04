@@ -124,6 +124,22 @@ footer {
     margin-bottom: 25px;
 }
 
+.image-poster:hover {
+    transform: scale(1.05,1.05);
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 86%;
+    padding: 5px;
+}
+
+.image-poster:hover > .image-text {
+    transform: scale(1.05,1.05);
+    }
+
 .movie-pagination {
     text-align: center;
 }
@@ -145,6 +161,14 @@ footer {
 .label-pagination {
     font-weight: bold;
     padding: 0 20px;
+}
+
+/* COMMERCIAL */
+
+
+
+#ImageCommerical {
+
 }
 
 /* SINGLE MOVIE PAGE */
@@ -243,6 +267,7 @@ footer {
     font-size: 1.5rem;
     text-transform: uppercase;
 }
+
 
 /* Extra Small devices (landscape phones, 375px and down) */
 @media only screen and (max-width: 375px) {
@@ -379,5 +404,17 @@ footer {
         .commercial img {
             width: 100%;
             height: 200px;
+        }
+
+    .footer .copy-streg {
+        width: 130px;
+        height: 0.5px;
+        background-color: #565656;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+        .footer .copy {
+            font-weight: bold;
         }
 }

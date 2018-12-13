@@ -111,10 +111,11 @@
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="footer">
-                                <a href="SearchPage.aspx"><p>Search</p></a>
                                 <a href="#"><p>Privacy policy</p></a>
                                 <a href="#"><p>Conditions of use</p></a>
                                 <a href="#"><p>Contact us</p></a>
+                                <div class="copy-streg"></div>
+                                <p class="copy">Moowish © 2018</p>
                             </div>
                         </div>
                     </div>
