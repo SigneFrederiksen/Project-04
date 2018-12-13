@@ -36,9 +36,9 @@
                 <div class="commercial">
                 <a id="Webpage" runat="server" href="#">
                 <h4 ><asp:Label ID="LabelCompany" runat="server" Text="Label"></asp:Label></h4>
-                <asp:Image ID="ImageCommercial" runat="server" />
+                <div id="imgcom"></div>
                 </a>
-                 </div>
+                </div>
             </div>
         </div>
     </div>

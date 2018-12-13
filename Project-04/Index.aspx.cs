@@ -55,7 +55,7 @@ namespace Project_04
             // insert the values from the xml to the different elements
             LabelCompany.Text = Convert.ToString(dt.Rows[randomCommercial][0]);
             Webpage.HRef = "http://" + Convert.ToString(dt.Rows[randomCommercial][2]);
-            ImageCommercial.ImageUrl = "~/img/" + Convert.ToString(dt.Rows[randomCommercial][1]);
+           // ImageCommercial.ImageUrl = "~/img/" + Convert.ToString(dt.Rows[randomCommercial][1]);
 
             // updating the transformed xml each time a new view has occurred
             ds.WriteXml(Server.MapPath("~/Files/CommercialsTransformed.xml"));

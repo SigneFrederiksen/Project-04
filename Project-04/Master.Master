@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Project 4 - Movie Website</title>
+    <title>Moowish - Movie Database</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!--Bootstrap CSS cdn-->
