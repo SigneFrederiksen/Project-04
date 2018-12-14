@@ -82,8 +82,8 @@
                             <!-- Search bar -->
                             <div class="col-xs-12 col-sm-8 col-md-8">
                                 <div class="search">
-                                    <asp:TextBox ID="TextBoxSearchBarMobile" runat="server" CssClass="search-field" Text="Movie title..."></asp:TextBox>
-                                    <asp:Button ID="ButtonSearchMobile" runat="server" Text="Search" CssClass="search-button" />
+                                    <asp:TextBox ID="TextBoxSearchBarMobile" runat="server" CssClass="search-field" placeholder="Movie title..."></asp:TextBox>
+                                    <asp:Button ID="ButtonSearchMobile" runat="server" Text="Search" CssClass="search-button" OnClick="ButtonSearchMobile_Click"/>
                                 </div>
                             </div>
                         </div>

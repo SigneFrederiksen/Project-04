@@ -44,6 +44,7 @@ namespace Project_04
                 lnkSci.Attributes["class"] = "active";
                 mlnkSci.Attributes["class"] = "active";
             }
+
         }
 
         // Button Search
@@ -60,6 +61,20 @@ namespace Project_04
             Url = "SearchPage.aspx?Search=" + SearchResult;
             Response.Redirect(Url);
 
+        }
+
+        // Button Search Mobile
+        protected void ButtonSearchMobile_Click(object sender, EventArgs e)
+        {
+            // Saves the input from TextBoxSearchBar,
+            // so that the we can use the data input on another page.
+            string SearchResult = TextBoxSearchBarMobile.Text;
+            string Url;
+
+            // We then rederect the user to SearchPage,
+            // where we will display the search result that the user typed in.
+            Url = "SearchPage.aspx?Search=" + SearchResult;
+            Response.Redirect(Url);
         }
     }
 }
