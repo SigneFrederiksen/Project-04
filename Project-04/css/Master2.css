@@ -307,9 +307,19 @@ footer {
         text-align: center !important;
     }
 
+    #imgcom {
+        width: 100%;
+        height: 250px;
+    }
+
+    .commercial h4 {
+        margin: 105px 0;
+    }
+
 
     .trailer {
-        margin-top: 50px;
+        margin: 50px 0;
+        height: 260px;
     }
 
     .comlarge {
@@ -426,6 +436,11 @@ footer {
         margin-left: 50px;
     }
 
+
+    .commercial h4 {
+        margin: 105px 0;
+    }
+
 }
 
 /* Large devices (desktops, 992px and down) */
@@ -478,6 +493,7 @@ footer {
         text-align: left;
         margin-bottom: 25px;
     }
+
 }
 
 /* Extra large devices (large desktops, 1200px and down) */
@@ -533,6 +549,7 @@ footer {
     .comlarge{
         display:inline-block;
     }
+
 }
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
@@ -597,6 +614,14 @@ footer {
     }
 }   
     @media (min-width: 1025px) and (max-width: 2560px) {
+
+        #imgcom {
+            height: 250px;
+        }
+
+        .commercial h4 {
+            margin: 105px 0;
+        }
 
 
         .comlarge h4 {
