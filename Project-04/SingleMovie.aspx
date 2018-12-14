@@ -9,7 +9,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
-            <asp:Button ID="ButtonBack" runat="server" Text="<< Go back" OnClick="ButtonBack_Click" CssClass="button-back" />
+            <asp:Button ID="ButtonBack" runat="server" Text="Go back" OnClick="ButtonBack_Click" CssClass="button-back" />
         </div>
          <div class="col-xs-12">
           
@@ -25,7 +25,7 @@
                         <asp:Image ID="ImagePoster2" runat="server" CssClass="image-info" /> 
                         <!-- <img src="<%# Eval("Poster") %>" alt="poster" class="image-poster" /> -->
                     </div>
-                    <div class="col-6">
+                    <div class="col-xs- 12 col-md-6">
                           <div class="single-details">
                                 <h3 class="heading-label"><asp:Label ID="LabelTitle" runat="server" Text="Label"><%# Eval("Title") %></asp:Label></h3>
                                 <p class="p-undertitle dot"><asp:Label ID="LabelYear" runat="server" Text="Label"> <%# Eval("Year") %></asp:Label></p>

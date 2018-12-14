@@ -90,13 +90,13 @@ header ul {
     border: none;
     padding: 5px 15px;
     font-weight: bold;
-    background-color: #363636;
-    color: #909090;
+    background-color: #c12345;
+    color: #000;
 }
 
-.search-button:hover {
-   background-color: #232323;
-}
+    .search-button:hover {
+        background-color: #d92f53;
+    }
 
 #mobile {
     display: none;
@@ -184,16 +184,16 @@ footer {
     border: none;
     padding: 5px 15px;
     font-weight: bold;
-    background-color: #363636;
-    color: #909090;
+    background-color: #c12345;
+    color: #000;
     margin-left: 135px;
     margin-bottom: 50px;
     margin-top: 25px;
 }
 
-.button-back:hover {
-    background-color: #232323;
-}
+    .button-back:hover {
+        background-color: #d92f53;
+    }
 
 .image-info {
     width: 60%;
@@ -324,6 +324,7 @@ footer {
         width: 100%;
         height: 210px;
         background-color: rgba(255, 255, 255, 0.1);
+        margin-bottom: 100px;
     }
 
     .commob h4 {
@@ -332,7 +333,40 @@ footer {
     }
 
     .image-poster {
-        height: 275px;
+        height: 250px !important;
+        width: 100% !important;
+    }
+
+    .single-details {
+        width: 100%;
+        margin: 0;
+    }
+
+    .image-info {
+        display: none;
+    }
+
+    .button-back {
+        background-color: #000;
+        color: #ff3c66;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 900;
+        margin: 35px 135px 0 135px !important;
+    }
+
+        .button-back:hover {
+            background-color: transparent;
+            color: #f1f1f1;
+        }
+
+    .single-details h3 {
+        margin: 35px 0 20px 0 !important;
+        font-size: 1.25rem;
+    }
+
+    .footer {
+        display: none;
     }
 
 }
@@ -344,6 +378,17 @@ footer {
         height: 350px;
     }
 
+    .single-details {
+        width: 85%;
+    }
+
+        .single-details h3 {
+            margin: 10px 0 !important;
+        }
+
+    .button-back {
+        margin-left: 60px;
+    }
 }
 
 /* Large devices (desktops, 992px and down) */
@@ -419,6 +464,7 @@ footer {
 
     #imgcom {
         width: 100%;
+        height: 235px !important;
     }
 
     .trailer {
@@ -426,10 +472,27 @@ footer {
     }
 
     .comlarge h4 {
-        top: 100px;
+        top: 110px !important;
     }
 
- }
+    .single-details {
+        width: 90%;
+        margin: 0% auto;
+    }
+
+    .button-back {
+        margin-left: 60px;
+    }
+
+    .single-details h3 {
+        margin: 25px 0 !important;
+        font-size: 1.2rem;
+    }
+
+    .image-poster {
+        width: 75%;
+    }
+}
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
