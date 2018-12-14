@@ -103,9 +103,9 @@ header ul {
 }
 
 footer {
-    margin: 20px 0;
+   /*margin: 20px 0;*/
     font-size: 12px;
-    margin: 75px 0;
+  /*  margin: 75px 0;*/
 }
 
 .footer {
@@ -125,14 +125,18 @@ footer {
     margin-bottom: 25px;
 }
 
-.image-poster:hover {
-    transform: scale(1.05,1.05);
-}
+    .image-poster:hover {
+        transform: scale(1.05,1.05);
+        -webkit-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+    }
 
 
 .image-poster:hover ~ .image-text {
     transform: scale(1.05,1.05);
-    }
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform: scale(1.05,1.05);
+  }
 
 .movie-pagination {
     text-align: center;
@@ -157,10 +161,17 @@ footer {
     padding: 0 20px;
 }
 
-.trailer {
+/*.trailer {
     width: 100%;
     height: 680px;
+}*/
+
+.trailer {
+    width: 100%;
+    height: 350px;
 }
+
+
 
 /* COMMERCIAL */
 
@@ -282,6 +293,8 @@ footer {
     .image-poster {
         height: 275px;
     }
+
+
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -293,6 +306,35 @@ footer {
     .site-logo {
         text-align: center !important;
     }
+
+    .comlarge {
+        display: none;
+    }
+
+    .trailer {
+        margin-top: 50px;
+    }
+
+    .heading-label {
+        margin-top: 0;
+    }
+
+
+    #imgcom-mob {
+        width: 100%;
+        height: 210px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .commob h4 {
+        display: inline-block !important;
+        top: 90px;
+    }
+
+    .image-poster {
+        height: 275px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
@@ -372,9 +414,22 @@ footer {
     }
 
     .image-poster {
-        height: 200px;
+        height: 325px;
     }
-}
+
+    #imgcom {
+        width: 100%;
+    }
+
+    .trailer {
+        height: 230px;
+    }
+
+    .comlarge h4 {
+        top: 100px;
+    }
+
+ }
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
 @media only screen and (max-width: 1440px) {
@@ -388,7 +443,7 @@ footer {
 @media (max-width: 425px) {
     .commercial img {
         width: 100%;
-        height: 100px;
+        height: 375px;
     }
 }
 
@@ -403,13 +458,11 @@ footer {
         width: 100%;
         margin: 0 auto;
         position: relative;
-        /*display:none;*/
     }
 
         .commercial h4 {
             text-align: center;
             position: absolute;
-            top: 90px;
             left: 0;
             right: 0; 
             font-size: 1.2rem;
@@ -417,16 +470,25 @@ footer {
             color: #565656;
         }
 
+    .comlarge h4 {
+        top: 150px;
+    }
+        
+
+        .commob h4 {
+            display: none;
+        }
+
     #imgcom {
         width: 100%;
-        height: 200px;
+        height: 350px;
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-
     .footer .copy {
         font-weight: bold;
-        margin: 35px 0;
+        /*margin: 35px 0; */
+        margin: 30px 0;
         color: #747474;
     }
 }

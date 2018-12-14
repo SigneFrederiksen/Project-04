@@ -6,13 +6,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="container-fluid">      
-        <div class="row">
-    
-        <div class="col-md-12">
+       
+        <div class="row"> 
+        <div class="col-md-9">
             <asp:Label ID="LabelTrailer" runat="server" Text=""></asp:Label>
-            <asp:Label ID="LabelTrailerName" runat="server" Text=""></asp:Label>
         </div>
+        <div class="col-md-3">
+            <div class="commercial comlarge">
+                <a id="Webpage" runat="server" href="#">
+                <h4 ><asp:Label ID="LabelCompany" runat="server" Text="Label"></asp:Label></h4>
+                <div id="imgcom"></div>
+                </a>
+                </div>
+        </div>
+        </div> 
 
+         <div class="row">
         <h2 class="col-md-12 heading-label">Our Top Movies</h2>
  
         <asp:Repeater ID="RepeaterPopularMovies" runat="server">
@@ -38,10 +47,10 @@
     <div class="container-fluid">
         <div class="row">   
             <div class="col-xs-12 col-md-12">
-                <div class="commercial">
-                <a id="Webpage" runat="server" href="#">
-                <h4 ><asp:Label ID="LabelCompany" runat="server" Text="Label"></asp:Label></h4>
-                <div id="imgcom"></div>
+                  <div class="commercial commob">
+                <a id="WebpageMob" runat="server" href="#">
+                <h4 ><asp:Label ID="LabelCompanyMob" runat="server" Text="Label"></asp:Label></h4>
+                <div id="imgcom-mob"></div>
                 </a>
                 </div>
             </div>

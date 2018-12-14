@@ -54,7 +54,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
 
 
                 <!-- MOBILE -->
@@ -99,22 +98,9 @@
           <footer>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-xs-12 col-md-12">
                             <div class="footer">
-                                <a href="Index.aspx"><p>Home</p></a>
-                                <a href="AllMovies.aspx"><p>All movies</p></a>
-                                <a href="Action.aspx"><p>Action</p></a>
-                                <a href="Animation.aspx"><p>Animation</p></a>
-                                <a href="Thriller.aspx"><p>Thriller</p></a>
-                                <a href="ScienceFiction.aspx"><p>Science fiction</p></a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="footer">
-                                <a href="#"><p>Privacy policy</p></a>
-                                <a href="#"><p>Conditions of use</p></a>
-                                <a href="#"><p>Contact us</p></a>
-                                <p class="copy">Moowish © 2018</p>
+                               <p class="copy">Moowish © 2018</p>
                             </div>
                         </div>
                     </div>

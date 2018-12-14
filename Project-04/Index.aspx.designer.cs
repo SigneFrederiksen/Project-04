@@ -22,13 +22,22 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelTrailer;
         
         /// <summary>
-        /// LabelTrailerName control.
+        /// Webpage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTrailerName;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Webpage;
+        
+        /// <summary>
+        /// LabelCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCompany;
         
         /// <summary>
         /// RepeaterPopularMovies control.
@@ -49,21 +58,21 @@ namespace Project_04 {
         protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
-        /// Webpage control.
+        /// WebpageMob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Webpage;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor WebpageMob;
         
         /// <summary>
-        /// LabelCompany control.
+        /// LabelCompanyMob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCompany;
+        protected global::System.Web.UI.WebControls.Label LabelCompanyMob;
     }
 }
