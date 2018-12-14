@@ -307,9 +307,9 @@ footer {
         text-align: center !important;
     }
 
-    .comlarge {
+   /* .comlarge {
         display: none;
-    }
+    } */
 
     .trailer {
         margin-top: 50px;
@@ -325,6 +325,10 @@ footer {
         height: 210px;
         background-color: rgba(255, 255, 255, 0.1);
         margin-bottom: 100px;
+    }
+
+    .commob {
+        display: inline-block;
     }
 
     .commob h4 {
@@ -492,6 +496,10 @@ footer {
     .image-poster {
         width: 75%;
     }
+
+    .comlarge{
+        display:inline-block;
+    }
 }
 
 /* Extra, extra large devices (large desktops, 1440px and down) */
@@ -536,7 +544,11 @@ footer {
     .comlarge h4 {
         top: 150px;
     }
-        
+
+
+    .comlarge {
+        display: inline-block;
+    }
 
         .commob h4 {
             display: none;
