@@ -303,6 +303,10 @@ footer {
         text-align: center !important;
     }
 
+    .site-logo {
+        text-align: center !important;
+    }
+
     #imgcom {
         width: 100%;
         height: 250px;
