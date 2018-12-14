@@ -19,8 +19,6 @@ namespace Project_04
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             if (Request.Url.AbsolutePath.EndsWith("AllMovies.aspx"))
             {
                 lnkAll.Attributes["class"] = "active";
@@ -47,7 +45,6 @@ namespace Project_04
                 mlnkSci.Attributes["class"] = "active";
             }
 
-           // ButtonEnabled();
         }
 
         // Button Search
@@ -64,30 +61,20 @@ namespace Project_04
             Url = "SearchPage.aspx?Search=" + SearchResult;
             Response.Redirect(Url);
 
-            /*    if (string.IsNullOrWhiteSpace(TextBoxSearchBar.Text))
-                {
-                    string Current = Response.ToString();
-                    Response.Redirect(Current);
-                }
-                else
-                {
-                    Response.Redirect(Url);
-                }*/
         }
 
-        /*public void ButtonEnabled()
+        // Button Search Mobile
+        protected void ButtonSearchMobile_Click(object sender, EventArgs e)
         {
+            // Saves the input from TextBoxSearchBar,
+            // so that the we can use the data input on another page.
+            string SearchResult = TextBoxSearchBarMobile.Text;
+            string Url;
 
-            if (TextBoxSearchBar.Text.Length > 0)
-            {
-                ButtonSearch.Enabled = false; // <<== No double-quotes around false
-            }
-            else
-            {
-                // Don't forget to re-enable the button
-                ButtonSearch.Enabled = true;
-            }
-        }*/
-
+            // We then rederect the user to SearchPage,
+            // where we will display the search result that the user typed in.
+            Url = "SearchPage.aspx?Search=" + SearchResult;
+            Response.Redirect(Url);
+        }
     }
 }
